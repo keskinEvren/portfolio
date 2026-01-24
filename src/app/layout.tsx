@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LenisProvider } from "@/lib/lenis-provider";
 import "./globals.css";
+import BackgroundMusic from "@/components/shared/BackgroundMusic";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <LenisProvider>{children}</LenisProvider>
+        <BackgroundMusic />
       </body>
     </html>
   );
