@@ -12,7 +12,7 @@ interface VideoBackgroundProps {
 
 export function VideoBackground({
   src = "/video.mp4",
-  poster,
+  poster = "/poster-placeholder.svg",
   className,
   overlay = true,
   overlayOpacity = 40,
