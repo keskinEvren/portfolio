@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 interface VideoBackgroundProps {
   src?: string;
+  poster?: string;
   className?: string;
   overlay?: boolean;
   overlayOpacity?: number;
@@ -11,6 +12,7 @@ interface VideoBackgroundProps {
 
 export function VideoBackground({
   src = "/video.mp4",
+  poster,
   className,
   overlay = true,
   overlayOpacity = 40,
@@ -22,6 +24,7 @@ export function VideoBackground({
         muted
         loop
         playsInline
+        poster={poster}
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src={src} type="video/mp4" />

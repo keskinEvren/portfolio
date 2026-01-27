@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import Link from "next/link";
+import { personalData } from "@/lib/data";
 
 export function Hero() {
   return (
@@ -20,7 +21,7 @@ export function Hero() {
         >
           Merhaba, Ben{" "}
           <span className="text-gradient bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
-            Evren Keskin
+            {personalData.name}
           </span>
         </motion.h1>
 
@@ -30,9 +31,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl text-white/70 mb-6 max-w-2xl mx-auto leading-relaxed"
         >
-          Frontend Developer
+          {personalData.title}
           <br />
-          React ve .NET ile modern web uygulamaları geliştiriyorum. Kullanıcı odaklı, responsive arayüzler tasarlıyorum ve temiz, ölçeklenebilir kod yazıyorum.
+          {personalData.description}
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +41,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.45 }}
           className="text-base text-white/50 mb-10"
         >
-          📍 Üsküdar, İstanbul, Türkiye
+          📍 {personalData.location}
         </motion.p>
 
         <motion.div
@@ -67,7 +68,11 @@ export function Hero() {
               İletişim
             </Button>
           </Link>
-          <a href="https://drive.google.com/file/d/1HgfhiXAinkoMHuPzOxJrLqXJV7BC5EJp/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <a
+            href={personalData.cvLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
               size="lg"
               variant="ghost"
@@ -85,6 +90,7 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        aria-hidden="true"
       >
         <span className="text-xs text-white/50 tracking-[0.3em] uppercase">
           Scroll
