@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { LenisProvider } from "@/lib/lenis-provider";
 import "./globals.css";
 import BackgroundMusic from "@/components/shared/BackgroundMusic";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { MouseSpotlight } from "@/components/ui/MouseSpotlight";
 import { seoData } from "@/lib/data";
 
 const geistSans = Geist({
@@ -67,6 +69,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}
         suppressHydrationWarning
       >
+        <ScrollProgress />
+        <MouseSpotlight />
         <LenisProvider>{children}</LenisProvider>
         <BackgroundMusic />
       </body>
