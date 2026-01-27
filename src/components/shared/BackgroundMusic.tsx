@@ -40,6 +40,7 @@ export default function BackgroundMusic() {
         ref={audioRef}
         loop
         muted={isMuted}
+        preload="none"
         src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112762.mp3"
       />
       <button
