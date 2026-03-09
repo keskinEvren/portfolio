@@ -26,6 +26,8 @@ const technologies = [
   { name: "Python", icon: Globe }, // Placeholder icon
 ];
 
+const DOUBLE_TECHNOLOGIES = [...technologies, ...technologies];
+
 // Custom Atom icon for React since Lucide doesn't have it exactly named 'React'
 function AtomIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -63,7 +65,7 @@ export function TechStack() {
             repeat: Infinity,
           }}
         >
-          {[...technologies, ...technologies].map((tech, index) => (
+          {DOUBLE_TECHNOLOGIES.map((tech, index) => (
             <div
               key={`${tech.name}-${index}`}
               className="flex items-center gap-3 flex-shrink-0 group"
