@@ -14,8 +14,7 @@ export default function BackgroundMusic() {
       const playPromise = audioRef.current.play();
 
       if (playPromise !== undefined) {
-        playPromise.catch((error) => {
-          console.log("Autoplay prevented by browser:", error);
+        playPromise.catch(() => {
           // If autoplay is prevented, it's likely due to lack of interaction or unmuted policy.
           // We switch to muted and try to play again or just show muted state.
           setIsMuted(true);
@@ -29,7 +28,7 @@ export default function BackgroundMusic() {
       audioRef.current.muted = !isMuted;
       setIsMuted(!isMuted);
       if (!isMuted === false) {
-        audioRef.current.play().catch(e => console.log("Play failed", e));
+        audioRef.current.play().catch(() => {});
       }
     }
   };
