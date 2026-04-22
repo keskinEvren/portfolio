@@ -11,12 +11,9 @@ export function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = throttle(() => {
-      const shouldBeVisible = window.scrollY > 500;
       setIsVisible((prev) => {
-        if (prev !== shouldBeVisible) {
-          return shouldBeVisible;
-        }
-        return prev;
+        const next = window.scrollY > 500;
+        return prev !== next ? next : prev;
       });
     }, 100);
 
