@@ -1,6 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 export function Footer() {
+  const t = useTranslations('Footer');
+  
   return (
     <footer id="contact" className="relative border-t border-white/10 bg-black/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
@@ -9,7 +13,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Evren Keskin
           </p>
           <p className="text-sm text-white/40">
-            Software Developer | React & .NET Enthusiast
+            {t('title')}
           </p>
         </div>
       </div>

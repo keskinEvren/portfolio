@@ -1,0 +1,95 @@
+{
+  "Hero": {
+    "greeting": "Merhaba, Ben",
+    "name": "Evren Keskin",
+    "title": "Product Manager | Product Owner",
+    "subtitle": "E-ticaret, Pazaryeri ve Lojistik",
+    "description": "Mühendislik geçmişine sahip; e-ticaret, pazaryeri ve lojistik alanlarında ürün yönetimi, product ownership ve delivery süreçlerinde deneyimli ürün profesyoneli.",
+    "location": "Üsküdar, İstanbul",
+    "cta_projects": "Projelerim",
+    "cta_contact": "İletişim",
+    "cta_download_cv": "CV İndir",
+    "scroll": "Kaydır"
+  },
+  "About": {
+    "section_title": "Hakkımda",
+    "greeting": "Merhaba, Ben",
+    "description_1": "Hem iç hem de dış yazılım ekipleriyle çalışarak talepleri önceliklendirme, gereksinimleri tanımlama, paydaş uyumu sağlama ve uçtan uca ürün teslimat süreçlerini (delivery) koordine etme konusunda deneyimliyim.",
+    "description_2": "Öncelik, uygulanabilirlik ve maliyet dengesini gözetirken; gereksinim netliği, sürüme hazırlık ve kesintisiz paydaş iletişimi aracılığıyla ürün süreçlerine yön veriyorum.",
+    "interests_title": "Temel Yetenekler & Odak Alanları",
+    "interest_1": "Ürün gereksinimleri & Backlog önceliklendirme",
+    "interest_2": "Kullanıcı geri bildirim analizi & İş akışı iyileştirme",
+    "interest_3": "Çapraz fonksiyonel (Cross-functional) iş birliği & Teslimat koordinasyonu",
+    "interest_4": "E-ticaret ve pazaryeri operasyonları",
+    "education_title": "Eğitim",
+    "education_degree": "Bilgisayar Mühendisliği Lisans, 2025",
+    "education_school": "Fatih Sultan Mehmet Vakıf Üniversitesi",
+    "location_title": "Lokasyon",
+    "location": "Üsküdar, İstanbul, Türkiye"
+  },
+  "Experience": {
+    "section_title": "Deneyim",
+    "heading": "İş Geçmişim",
+    "subheading": "Kariyer yolculuğumdaki roller ve sorumluluklar",
+    "jobs": [
+      {
+        "company": "Yetiş+ Çarşı / Hızır Global A.Ş.",
+        "role": "Product Manager / Product Owner",
+        "period": "Ağu 2025 - Günümüz",
+        "location": "Şişli, İstanbul",
+        "description": "E-ticaret, yemek siparişi, kurye ve depo operasyonlarını kapsayan 4 ana ürünün geliştirme ve iyileştirme süreçlerini yönetiyorum. İş birimi, saha ve yönetim taleplerini yazılım ekipleri için net ürün gereksinimlerine dönüştürüyor; 40-50 bayilik ekosistemde doğru problemlerin çözülmesini sağlıyorum."
+      },
+      {
+        "company": "Rosecasa",
+        "role": "E-commerce & Web Content Assistant",
+        "period": "Eki 2024 - Nis 2025",
+        "location": "Üsküdar, İstanbul",
+        "description": "WordPress tabanlı e-ticaret sitelerinin günlük içerik ve operasyonel güncellemelerini yönettim. Trendyol, N11 ve Hepsiburada gibi pazaryerlerinde ürün kalitesi yönetimi, veri tutarlılığı ve operasyonel bakım destekleri sundum."
+      },
+      {
+        "company": "Rappider",
+        "role": "Frontend Developer Intern",
+        "period": "Haz 2023 - Eyl 2023",
+        "location": "Levent, İstanbul",
+        "description": "Çevik (Agile) ürün geliştirme ortamında Angular kullanarak yeniden kullanılabilir UI bileşenleri geliştirdim. Temiz kod prensipleriyle arayüz standartlarının oluşturulmasına katkı sağladım."
+      },
+      {
+        "company": "Jotform",
+        "role": "UI Developer Intern",
+        "period": "Haz 2021 - Eyl 2021",
+        "location": "Beytepe, Ankara",
+        "description": "React Native kullanarak mobil UI ekranları inşa ettim. Kullanılabilirliği artırmak için UI/UX best practice'lerini uygulayıp ekran davranışlarını farklı cihazlarda test ederek optimize ettim."
+      }
+    ]
+  },
+  "Projects": {
+    "section_title": "Portfolio",
+    "heading": "Projelerim",
+    "subheading": "Son dönemdeki öne çıkan projelerim",
+    "items": [
+      {
+        "title": "Kariyer Takip Portalı",
+        "description": "Staj süreçlerini uçtan uca yönetmek için Admin, Öğretmen ve Öğrenci akışlarına sahip rol tabanlı (RBAC) bir platform tasarlayıp geliştirdim. Merkezileştirilmiş sistem üzerinden birden fazla paydaş için onay, inceleme ve kullanıcı yönetimi süreçlerini yapılandırdım."
+      },
+      {
+        "title": "Apartman Plus",
+        "description": "Apartman/site yönetimi, rol tabanlı erişim, sakin/birim yapıları, finans, operasyon ve doküman akışlarını kapsayan modüler bir SaaS konsepti tasarladım."
+      }
+    ],
+    "github_btn": "GitHub",
+    "live_demo_btn": "Live Demo"
+  },
+  "TechStack": {
+    "section_title": "Teknoloji Stack'i"
+  },
+  "Navbar": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "experience": "Deneyim",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "Footer": {
+    "title": "Product Manager | Product Owner"
+  }
+}

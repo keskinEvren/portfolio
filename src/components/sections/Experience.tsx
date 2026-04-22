@@ -4,45 +4,7 @@ import { motion } from "framer-motion";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { Briefcase, Calendar } from "lucide-react";
-
-const experiences = [
-  {
-    company: "TNC Group",
-    role: "Information Technology Intern",
-    period: "Jun 2025 - Jul 2025",
-    location: "Ataşehir/İstanbul",
-    description:
-      "Yoğun bir uygulamalı eğitim programı tamamladım: Excel, Photoshop, AutoCAD ve Python. Takım tabanlı bir ortamda gerçek hayat projelerinde çalışarak kodlama ve tasarım becerilerimi uyguladım.",
-    technologies: ["Python", "Excel", "Photoshop", "AutoCAD"],
-  },
-  {
-    company: "Rosecasa",
-    role: "E-commerce & Web Content Assistant",
-    period: "Oct 2024 - Apr 2025",
-    location: "Üsküdar/İstanbul",
-    description:
-      "WordPress tabanlı e-ticaret web sitelerini sürdürdüm ve güncelledim. Trendyol, N11 ve Hepsiburada gibi platformlarda deneyim kazandım. Reklam operasyonları, görsel içerik oluşturma ve ürün listeleme konularında destek sağladım.",
-    technologies: ["WordPress", "E-commerce", "Content Management"],
-  },
-  {
-    company: "Rappider",
-    role: "Frontend Developer Intern",
-    period: "Jun 2023 - Sep 2023",
-    location: "Levent/İstanbul",
-    description:
-      "Agile bir ortamda Angular kullanarak dinamik UI bileşenleri geliştirdim. Kullanıcı dostu ve görsel olarak çekici arayüzler oluşturmaya odaklandım.",
-    technologies: ["Angular", "TypeScript", "UI/UX"],
-  },
-  {
-    company: "Jotform",
-    role: "UI Developer Intern",
-    period: "Jun 2021 - Sep 2021",
-    location: "Beytepe/Ankara",
-    description:
-      "React Native kullanarak mobil uygulama UI'ları oluşturdum ve UI/UX en iyi uygulamalarını uyguladım. Uygulama görsellerini birden fazla cihazda test ettim ve optimize ettim. Tasarımcılar ve geliştiricilerle yakın çalışarak tutarlılık ve kullanılabilirliği korudum.",
-    technologies: ["React Native", "UI/UX", "Mobile Development"],
-  },
-];
+import { useTranslations } from "next-intl";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -64,6 +26,10 @@ const itemVariants = {
 };
 
 export function Experience() {
+  const t = useTranslations('Experience');
+  // Re-creating the jobs array from translation array structure
+  const jobs: any[] = t.raw('jobs');
+
   return (
     <SectionWrapper id="experience" className="relative">
       <div className="text-center mb-16">
@@ -73,7 +39,7 @@ export function Experience() {
           viewport={{ once: true }}
           className="inline-block text-sm text-white/50 uppercase tracking-widest mb-4"
         >
-          Deneyim
+          {t('section_title')}
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -82,7 +48,7 @@ export function Experience() {
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
         >
-          İş Geçmişim
+          {t('heading')}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +57,7 @@ export function Experience() {
           transition={{ delay: 0.2 }}
           className="text-white/60 max-w-2xl mx-auto"
         >
-          Kariyer yolculuğumda edindiğim deneyimler ve çalıştığım projeler
+          {t('subheading')}
         </motion.p>
       </div>
 
@@ -103,8 +69,8 @@ export function Experience() {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-6"
         >
-          {experiences.map((exp, index) => (
-            <motion.div key={exp.company} variants={itemVariants}>
+          {jobs.map((exp: any, index: number) => (
+            <motion.div key={index} variants={itemVariants}>
               <GlassCard className="p-6 md:p-8 relative">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                   <div className="flex-1">
@@ -133,14 +99,19 @@ export function Experience() {
                   {exp.description}
                 </p>
 
+                {/* Tags structure based on roles */}
                 <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
-                  {exp.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10"
-                    >
-                      {tech}
-                    </span>
+                  {index === 0 && ["Product Management", "Backlog Prioritization", "Delivery"].map(tech => (
+                      <span key={tech} className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10">{tech}</span>
+                  ))}
+                  {index === 1 && ["WordPress", "E-commerce", "Trendyol"].map(tech => (
+                      <span key={tech} className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10">{tech}</span>
+                  ))}
+                  {index === 2 && ["Angular", "TypeScript", "UI Components"].map(tech => (
+                      <span key={tech} className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10">{tech}</span>
+                  ))}
+                  {index === 3 && ["React Native", "UI/UX", "Mobile"].map(tech => (
+                      <span key={tech} className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10">{tech}</span>
                   ))}
                 </div>
               </GlassCard>
@@ -151,4 +122,3 @@ export function Experience() {
     </SectionWrapper>
   );
 }
-

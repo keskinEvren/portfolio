@@ -11,19 +11,20 @@ import {
   Terminal,
   Layers,
   Box,
+  PenTool,
+  GitGraph,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const technologies = [
   { name: "React", icon: AtomIcon },
   { name: "Next.js", icon: Layers },
   { name: ".NET", icon: Terminal },
   { name: "TypeScript", icon: Code2 },
-  { name: "Tailwind CSS", icon: Layout },
   { name: "PostgreSQL", icon: Database },
-  { name: "Node.js", icon: Server },
-  { name: "React Native", icon: Smartphone },
-  { name: "Framer Motion", icon: Box },
-  { name: "Python", icon: Globe }, // Placeholder icon
+  { name: "Figma", icon: PenTool },
+  { name: "Git", icon: GitGraph },
+  { name: "WordPress", icon: Globe },
 ];
 
 const DOUBLE_TECHNOLOGIES = [...technologies, ...technologies];
@@ -51,6 +52,8 @@ function AtomIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 export function TechStack() {
+  const t = useTranslations('TechStack');
+
   return (
     <section className="py-10 border-y border-white/5 bg-white/5 backdrop-blur-sm overflow-hidden">
       <div className="flex">

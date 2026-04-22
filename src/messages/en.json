@@ -1,0 +1,95 @@
+{
+  "Hero": {
+    "greeting": "Hello, I'm",
+    "name": "Evren Keskin",
+    "title": "Product Manager | Product Owner",
+    "subtitle": "E-commerce Marketplace & Logistics",
+    "description": "Product professional with an engineering background, working across product management, product ownership, and delivery in e-commerce, marketplace, and logistics environments.",
+    "location": "Üsküdar, Istanbul",
+    "cta_projects": "My Projects",
+    "cta_contact": "Contact",
+    "cta_download_cv": "Download CV",
+    "scroll": "Scroll"
+  },
+  "About": {
+    "section_title": "About",
+    "greeting": "Hello, I'm",
+    "description_1": "Experienced in prioritizing requests, defining requirements, aligning stakeholders, and coordinating execution across both internal and external software teams.",
+    "description_2": "Strong in balancing urgency, feasibility, and cost while guiding delivery through requirement clarity, rollout readiness, and continuous stakeholder communication.",
+    "interests_title": "Core Skills & Focus Areas",
+    "interest_1": "Product requirements & backlog prioritization",
+    "interest_2": "User feedback translation & workflow improvement",
+    "interest_3": "Cross-functional collaboration & delivery coordination",
+    "interest_4": "E-commerce and marketplace operations",
+    "education_title": "Education",
+    "education_degree": "B.S. in Computer Engineering, 2025",
+    "education_school": "Fatih Sultan Mehmet Vakıf University",
+    "location_title": "Location",
+    "location": "Üsküdar, Istanbul, Türkiye"
+  },
+  "Experience": {
+    "section_title": "Experience",
+    "heading": "Professional Experience",
+    "subheading": "Roles and responsibilities throughout my career journey",
+    "jobs": [
+      {
+        "company": "Yetiş+ Çarşı / Hızır Global A.Ş.",
+        "role": "Product Manager / Product Owner",
+        "period": "Aug 2025 - Present",
+        "location": "Şişli, Istanbul",
+        "description": "Support the execution and improvement of 4 products across e-commerce, food ordering, courier, and warehouse operations. Translate business, field, and leadership needs into clear product requirements. Manage product execution across a dealer/franchise ecosystem of 40-50 affiliates, ensuring the right problems are addressed."
+      },
+      {
+        "company": "Rosecasa",
+        "role": "E-commerce & Web Content Assistant",
+        "period": "Oct 2024 - Apr 2025",
+        "location": "Üsküdar, Istanbul",
+        "description": "Managed day-to-day content and operational updates for WordPress-based e-commerce websites. Supported marketplace operations across Trendyol, N11, and Hepsiburada, ensuring listing quality and operational maintenance."
+      },
+      {
+        "company": "Rappider",
+        "role": "Frontend Developer Intern",
+        "period": "Jun 2023 - Sep 2023",
+        "location": "Levent, Istanbul",
+        "description": "Developed reusable UI components in Angular within an agile product development environment. Contributed to cleaner implementation and consistent interface patterns."
+      },
+      {
+        "company": "Jotform",
+        "role": "UI Developer Intern",
+        "period": "Jun 2021 - Sep 2021",
+        "location": "Beytepe, Ankara",
+        "description": "Built mobile UI screens using React Native. Applied UI/UX best practices to support usability and tested behaviors across multiple devices."
+      }
+    ]
+  },
+  "Projects": {
+    "section_title": "Portfolio",
+    "heading": "My Projects",
+    "subheading": "Featured projects focusing on delivery and architecture",
+    "items": [
+      {
+        "title": "Career Tracking Portal",
+        "description": "Designed and developed a role-based platform with Admin, Teacher, and Student workflows to manage internship processes end to end. Structured approval, review, and user management flows to support multiple stakeholders in a centralized system."
+      },
+      {
+        "title": "Apartman Plus",
+        "description": "Designed a modular SaaS concept for residential site management covering role-based access, resident and unit structures, facilities, finance, operations, and document workflows."
+      }
+    ],
+    "github_btn": "GitHub",
+    "live_demo_btn": "Live Demo"
+  },
+  "TechStack": {
+    "section_title": "Tech Stack"
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "title": "Product Manager | Product Owner"
+  }
+}

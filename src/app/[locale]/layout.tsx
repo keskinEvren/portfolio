@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LenisProvider } from "@/lib/lenis-provider";
-import "./globals.css";
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
+import "../globals.css";
 import BackgroundMusic from "@/components/shared/BackgroundMusic";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { MouseSpotlight } from "@/components/ui/MouseSpotlight";
@@ -58,20 +62,32 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{locale: string}>;
 }>) {
+  const {locale} = await params;
+  
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+  
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang={locale} className="dark" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}
         suppressHydrationWarning
       >
         <ScrollProgress />
         <MouseSpotlight />
-        <LenisProvider>{children}</LenisProvider>
+        <NextIntlClientProvider messages={messages}>
+          <LenisProvider>{children}</LenisProvider>
+        </NextIntlClientProvider>
         <BackgroundMusic />
       </body>
     </html>
