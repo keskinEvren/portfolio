@@ -42,7 +42,7 @@ export function About() {
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
             >
               <Target className="w-4 h-4 text-white" />
-              <span className="text-sm text-white/90">Prioritization</span>
+              <span className="text-sm text-white/90">{t('metric_1')}</span>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export function About() {
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
             >
               <Rocket className="w-4 h-4 text-white" />
-              <span className="text-sm text-white/90">Delivery</span>
+              <span className="text-sm text-white/90">{t('metric_2')}</span>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ export function About() {
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
             >
               <Heart className="w-4 h-4 text-white" />
-              <span className="text-sm text-white/90">User Feedback</span>
+              <span className="text-sm text-white/90">{t('metric_3')}</span>
             </motion.div>
           </div>
         </motion.div>

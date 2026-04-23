@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { Code, Database, Smartphone, Palette, Globe, Server } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const skills = [
   {
@@ -64,6 +65,19 @@ const itemVariants = {
 };
 
 export function Features() {
+  const t = useTranslations('Features');
+  const items: any[] = t.raw('skills');
+
+  // Map translations to skills
+  const skillsList = [
+    { ...items[0], icon: Code },
+    { ...items[1], icon: Server },
+    { ...items[2], icon: Smartphone },
+    { ...items[3], icon: Database },
+    { ...items[4], icon: Palette },
+    { ...items[5], icon: Globe },
+  ];
+
   return (
     <SectionWrapper id="skills" className="relative">
       <div className="text-center mb-16">
@@ -73,7 +87,7 @@ export function Features() {
           viewport={{ once: true }}
           className="inline-block text-sm text-white/50 uppercase tracking-widest mb-4"
         >
-          Yetenekler
+          {t('section_title')}
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -82,7 +96,7 @@ export function Features() {
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
         >
-          Teknoloji Stack'im
+          {t('heading')}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +105,7 @@ export function Features() {
           transition={{ delay: 0.2 }}
           className="text-white/60 max-w-2xl mx-auto"
         >
-          Modern teknolojilerle güçlü ve ölçeklenebilir çözümler üretiyorum
+          {t('subheading')}
         </motion.p>
       </div>
 
@@ -102,7 +116,7 @@ export function Features() {
         viewport={{ once: true, margin: "-100px" }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {skills.map((skill, index) => (
+        {skillsList.map((skill, index) => (
           <motion.div key={skill.title} variants={itemVariants}>
             <GlassCard className="p-6 h-full group cursor-pointer">
               <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">

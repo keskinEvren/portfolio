@@ -3,8 +3,8 @@
     "greeting": "Hello, I'm",
     "name": "Evren Keskin",
     "title": "Product Manager | Product Owner",
-    "subtitle": "E-commerce Marketplace & Logistics",
-    "description": "Product professional with an engineering background, working across product management, product ownership, and delivery in e-commerce, marketplace, and logistics environments.",
+    "subtitle": "E-commerce & Marketplace",
+    "description": "Product professional with an engineering background, working across product management, product ownership, and delivery in e-commerce and marketplace environments.",
     "location": "Üsküdar, Istanbul",
     "cta_projects": "My Projects",
     "cta_contact": "Contact",
@@ -25,7 +25,10 @@
     "education_degree": "B.S. in Computer Engineering, 2025",
     "education_school": "Fatih Sultan Mehmet Vakıf University",
     "location_title": "Location",
-    "location": "Üsküdar, Istanbul, Türkiye"
+    "location": "Üsküdar, Istanbul, Türkiye",
+    "metric_1": "Prioritization",
+    "metric_2": "Delivery",
+    "metric_3": "User Feedback"
   },
   "Experience": {
     "section_title": "Experience",
@@ -74,6 +77,14 @@
       {
         "title": "Apartman Plus",
         "description": "Designed a modular SaaS concept for residential site management covering role-based access, resident and unit structures, facilities, finance, operations, and document workflows."
+      },
+      {
+        "title": "Hızır Global Corporate",
+        "description": "Developed a full-stack, multilingual (TR, EN, RU, AZ) corporate web platform for Hızır Global, Turkey's integrated commerce ecosystem. It features a brands showcase, media center, franchise application systems, and a custom admin panel for managing the corporate content."
+      },
+      {
+        "title": "Cube Runner 2D",
+        "description": "My first game project, developed while learning game development. It is an endless 2D runner game featuring a parallax background effect. I plan to introduce my own custom mechanics and features into this project in the future."
       }
     ],
     "github_btn": "GitHub",
@@ -91,5 +102,52 @@
   },
   "Footer": {
     "title": "Product Manager | Product Owner"
+  },
+  "Features": {
+    "section_title": "Skills",
+    "heading": "My Tech Stack",
+    "subheading": "Building powerful and scalable solutions with modern technologies",
+    "skills": [
+      {
+        "title": "Programming Languages",
+        "description": "Strong programming fundamentals with Python, C#, and JavaScript. Experienced in writing clean and scalable code."
+      },
+      {
+        "title": "Web Frameworks",
+        "description": "Developing modern web applications with ASP.NET Core and React.js. Experienced in backend and frontend integration."
+      },
+      {
+        "title": "Mobile Development",
+        "description": "Experience in mobile app development using React Native. Creating user-friendly interfaces by applying UI/UX best practices."
+      },
+      {
+        "title": "Database & Data",
+        "description": "Database management with PostgreSQL. Experienced in data analysis and processing with NumPy and Pandas."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Designing modern and usable interfaces with user-centered design principles. Creating responsive and accessible designs."
+      },
+      {
+        "title": "Full Stack Development",
+        "description": "End-to-end web application development with .NET and React. Comprehensive experience in frontend and backend integration."
+      }
+    ]
+  },
+  "CTA": {
+    "section_title": "Contact",
+    "heading": "Let's Work Together",
+    "subheading": "Feel free to reach out to me for your projects. I'd be happy to assist you.",
+    "contact_info": "Contact Information",
+    "send_message": "Send a Message",
+    "name_placeholder": "Name",
+    "email_placeholder": "Email",
+    "phone_placeholder": "Phone (Optional)",
+    "message_placeholder": "Your Message",
+    "submit_btn": "Send Message",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "linkedin_label": "LinkedIn",
+    "github_label": "GitHub"
   }
 }

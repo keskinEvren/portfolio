@@ -31,7 +31,6 @@ export function Projects() {
   const t = useTranslations('Projects');
   const items: any[] = t.raw('items');
 
-  // Map to the translation items and add tech stack & links
   const projects = items.map((item, index) => {
     if (index === 0) {
       return {
@@ -41,12 +40,28 @@ export function Projects() {
         live: "#",
         featured: true,
       };
-    } else {
+    } else if (index === 1) {
       return {
         ...item,
         technologies: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "tRPC"],
         github: "#",
         live: "#",
+        featured: true,
+      };
+    } else if (index === 2) {
+      return {
+        ...item,
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "i18n", "Node.js"],
+        github: "#",
+        live: "https://hizirglobal.com.tr/tr",
+        featured: true,
+      };
+    } else {
+      return {
+        ...item,
+        technologies: ["Unity", "C#", "2D Development", "Game Design"],
+        github: "https://github.com/keskinEvren/cube-runner",
+        live: "https://evren-keskin.itch.io/cube-runner-2d",
         featured: true,
       };
     }
@@ -129,17 +144,17 @@ export function Projects() {
                     </a>
                   </Button>
                 )}
-                {/* 
-                <Button
-                  className="flex-1 rounded-full py-2 bg-white text-black hover:bg-white/90 text-sm"
-                  asChild
-                >
-                  <a href={project.live} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    {t('live_demo_btn')}
-                  </a>
-                </Button> 
-                */}
+                {project.live !== "#" && (
+                  <Button
+                    className="flex-1 rounded-full py-2 bg-white text-black hover:bg-white/90 text-sm"
+                    asChild
+                  >
+                    <a href={project.live} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      {t('live_demo_btn')}
+                    </a>
+                  </Button>
+                )}
               </div>
             </GlassCard>
           </motion.div>

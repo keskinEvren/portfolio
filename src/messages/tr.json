@@ -3,8 +3,8 @@
     "greeting": "Merhaba, Ben",
     "name": "Evren Keskin",
     "title": "Product Manager | Product Owner",
-    "subtitle": "E-ticaret, Pazaryeri ve Lojistik",
-    "description": "Mühendislik geçmişine sahip; e-ticaret, pazaryeri ve lojistik alanlarında ürün yönetimi, product ownership ve delivery süreçlerinde deneyimli ürün profesyoneli.",
+    "subtitle": "E-ticaret ve Pazaryeri",
+    "description": "Mühendislik geçmişine sahip; e-ticaret ve pazaryeri alanlarında ürün yönetimi, product ownership ve delivery süreçlerinde deneyimli ürün profesyoneli.",
     "location": "Üsküdar, İstanbul",
     "cta_projects": "Projelerim",
     "cta_contact": "İletişim",
@@ -25,7 +25,10 @@
     "education_degree": "Bilgisayar Mühendisliği Lisans, 2025",
     "education_school": "Fatih Sultan Mehmet Vakıf Üniversitesi",
     "location_title": "Lokasyon",
-    "location": "Üsküdar, İstanbul, Türkiye"
+    "location": "Üsküdar, İstanbul, Türkiye",
+    "metric_1": "Önceliklendirme",
+    "metric_2": "Teslimat",
+    "metric_3": "Kullanıcı Geri Bildirimi"
   },
   "Experience": {
     "section_title": "Deneyim",
@@ -74,6 +77,14 @@
       {
         "title": "Apartman Plus",
         "description": "Apartman/site yönetimi, rol tabanlı erişim, sakin/birim yapıları, finans, operasyon ve doküman akışlarını kapsayan modüler bir SaaS konsepti tasarladım."
+      },
+      {
+        "title": "Hızır Global Kurumsal",
+        "description": "Türkiye'nin entegre ticaret ekosistemi olan Hızır Global için çok dilli (TR, EN, RU, AZ) kurumsal web platformu geliştirdim. İçerisinde markalar vitrini, medya merkezi, iştirak başvuru sistemleri ve kurumsal sayfaları yönetmeyi sağlayan özel bir admin paneli barındırmaktadır."
+      },
+      {
+        "title": "Cube Runner 2D",
+        "description": "Oyun geliştirme öğrenme sürecimde geliştirdiğim ilk oyun projem. Parallax arka plan efektine sahip bir 2D sonsuz koşu (endless runner) oyunudur. İlerleyen süreçte kendi mekaniklerimi ve özelliklerimi oyunun üzerine eklemeyi planlıyorum."
       }
     ],
     "github_btn": "GitHub",
@@ -91,5 +102,52 @@
   },
   "Footer": {
     "title": "Product Manager | Product Owner"
+  },
+  "Features": {
+    "section_title": "Yetenekler",
+    "heading": "Teknoloji Stack'im",
+    "subheading": "Modern teknolojilerle güçlü ve ölçeklenebilir çözümler üretiyorum",
+    "skills": [
+      {
+        "title": "Programming Languages",
+        "description": "Python, C# ve JavaScript ile güçlü programlama temelleri. Temiz ve ölçeklenebilir kod yazma konusunda deneyimliyim."
+      },
+      {
+        "title": "Web Frameworks",
+        "description": "ASP.NET Core ve React.js ile modern web uygulamaları geliştiriyorum. Backend ve frontend entegrasyonu konusunda deneyimliyim."
+      },
+      {
+        "title": "Mobile Development",
+        "description": "React Native ile mobil uygulama geliştirme deneyimim var. UI/UX best practices uygulayarak kullanıcı dostu arayüzler oluşturuyorum."
+      },
+      {
+        "title": "Database & Data",
+        "description": "PostgreSQL ile veritabanı yönetimi. NumPy ve Pandas ile veri analizi ve işleme konularında deneyimliyim."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Kullanıcı odaklı tasarım prensipleriyle modern ve kullanışlı arayüzler tasarlıyorum. Responsive ve erişilebilir tasarımlar oluşturuyorum."
+      },
+      {
+        "title": "Full Stack Development",
+        "description": ".NET ve React ile end-to-end web uygulama geliştirme. Frontend ve backend entegrasyonu konusunda kapsamlı deneyime sahibim."
+      }
+    ]
+  },
+  "CTA": {
+    "section_title": "İletişim",
+    "heading": "Birlikte Çalışalım",
+    "subheading": "Projeleriniz için benimle iletişime geçmekten çekinmeyin. Size yardımcı olmaktan mutluluk duyarım.",
+    "contact_info": "İletişim Bilgileri",
+    "send_message": "Mesaj Gönder",
+    "name_placeholder": "İsim",
+    "email_placeholder": "Email",
+    "phone_placeholder": "Telefon (Opsiyonel)",
+    "message_placeholder": "Mesajınız",
+    "submit_btn": "Mesaj Gönder",
+    "phone_label": "Telefon",
+    "email_label": "Email",
+    "linkedin_label": "LinkedIn",
+    "github_label": "GitHub"
   }
 }

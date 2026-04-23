@@ -6,6 +6,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { Mail, Linkedin, Github, Send, Phone } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const socialLinks = [
   {
@@ -35,6 +36,8 @@ const socialLinks = [
 ];
 
 export function CTA() {
+  const t = useTranslations('CTA');
+
   return (
     <SectionWrapper id="contact" className="relative">
       <div className="text-center mb-16">
@@ -44,7 +47,7 @@ export function CTA() {
           viewport={{ once: true }}
           className="inline-block text-sm text-white/50 uppercase tracking-widest mb-4"
         >
-          İletişim
+          {t('section_title')}
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +56,7 @@ export function CTA() {
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
         >
-          Birlikte Çalışalım
+          {t('heading')}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -62,7 +65,7 @@ export function CTA() {
           transition={{ delay: 0.2 }}
           className="text-white/60 max-w-2xl mx-auto"
         >
-          Projeleriniz için benimle iletişime geçmekten çekinmeyin. Size yardımcı olmaktan mutluluk duyarım.
+          {t('subheading')}
         </motion.p>
       </div>
 
@@ -75,7 +78,7 @@ export function CTA() {
         >
           <GlassCard className="p-8 h-full">
             <h3 className="text-2xl font-semibold text-white mb-6">
-              İletişim Bilgileri
+              {t('contact_info')}
             </h3>
             <div className="space-y-4">
               {socialLinks.map((social) => (
@@ -90,7 +93,12 @@ export function CTA() {
                     <social.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-white/50">{social.label}</p>
+                    <p className="text-sm text-white/50">
+                      {social.label === "Email" ? t('email_label') : 
+                       social.label === "Telefon" ? t('phone_label') : 
+                       social.label === "LinkedIn" ? t('linkedin_label') : 
+                       t('github_label')}
+                    </p>
                     <p className="text-white/90">{social.text}</p>
                   </div>
                 </Link>
@@ -107,33 +115,33 @@ export function CTA() {
         >
           <GlassCard className="p-8 h-full">
             <h3 className="text-2xl font-semibold text-white mb-6">
-              Mesaj Gönder
+              {t('send_message')}
             </h3>
             <form className="space-y-4">
               <div>
                 <input
                   type="text"
-                  placeholder="İsim"
+                  placeholder={t('name_placeholder')}
                   className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/50 focus:outline-none focus:border-white/30 transition-colors"
                 />
               </div>
               <div>
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder={t('email_placeholder')}
                   className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/50 focus:outline-none focus:border-white/30 transition-colors"
                 />
               </div>
               <div>
                 <input
                   type="tel"
-                  placeholder="Telefon (Opsiyonel)"
+                  placeholder={t('phone_placeholder')}
                   className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/50 focus:outline-none focus:border-white/30 transition-colors"
                 />
               </div>
               <div>
                 <textarea
-                  placeholder="Mesajınız"
+                  placeholder={t('message_placeholder')}
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/50 focus:outline-none focus:border-white/30 transition-colors resize-none"
                 />
@@ -143,7 +151,7 @@ export function CTA() {
                 size="lg"
                 className="w-full rounded-full px-8 py-6 bg-white text-black hover:bg-white/90 font-medium text-base group"
               >
-                Mesaj Gönder
+                {t('submit_btn')}
                 <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
