@@ -73,7 +73,7 @@ export function Hero() {
             </Button>
           </Link>
           <a
-            href="/cv.pdf"
+            href="/Evren-Keskin-Product-Manager-Product-Owner-CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
