@@ -83,8 +83,8 @@
         "description": "Developed a full-stack, multilingual (TR, EN, RU, AZ) corporate web platform for Hızır Global, Turkey's integrated commerce ecosystem. It features a brands showcase, media center, franchise application systems, and a custom admin panel for managing the corporate content."
       },
       {
-        "title": "Cube Runner 2D",
-        "description": "My first game project, developed while learning game development. It is an endless 2D runner game featuring a parallax background effect. I plan to introduce my own custom mechanics and features into this project in the future."
+        "title": "Sherlith",
+        "description": "Built a gothic-themed digital universe combining e-commerce, lore, music, and interactive game experiences on a single platform. Developed as a headless architecture with Next.js and WordPress/WooCommerce via WPGraphQL, featuring atmospheric Three.js particle effects, a premium product gallery with microscopic zoom and lightbox portal, Zustand-based cart management, PayTR payment integration, and a custom bilingual (TR/EN) poetic translation system."
       }
     ],
     "github_btn": "GitHub",

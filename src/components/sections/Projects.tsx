@@ -59,9 +59,9 @@ export function Projects() {
     } else {
       return {
         ...item,
-        technologies: ["Unity", "C#", "2D Development", "Game Design"],
-        github: "https://github.com/keskinEvren/cube-runner",
-        live: "https://evren-keskin.itch.io/cube-runner-2d",
+        technologies: ["Next.js", "React", "Three.js", "Tailwind CSS", "WPGraphQL", "Zustand"],
+        github: "#",
+        live: "https://sherlith.com",
         featured: true,
       };
     }

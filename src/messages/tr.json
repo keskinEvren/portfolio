@@ -83,8 +83,8 @@
         "description": "Türkiye'nin entegre ticaret ekosistemi olan Hızır Global için çok dilli (TR, EN, RU, AZ) kurumsal web platformu geliştirdim. İçerisinde markalar vitrini, medya merkezi, iştirak başvuru sistemleri ve kurumsal sayfaları yönetmeyi sağlayan özel bir admin paneli barındırmaktadır."
       },
       {
-        "title": "Cube Runner 2D",
-        "description": "Oyun geliştirme öğrenme sürecimde geliştirdiğim ilk oyun projem. Parallax arka plan efektine sahip bir 2D sonsuz koşu (endless runner) oyunudur. İlerleyen süreçte kendi mekaniklerimi ve özelliklerimi oyunun üzerine eklemeyi planlıyorum."
+        "title": "Sherlith",
+        "description": "Gotik temalı, e-ticaret, evren hikâyesi (lore), müzik ve etkileşimli oyun deneyimlerini tek bir platformda birleştiren dijital bir evren inşa ettim. Next.js ve WordPress/WooCommerce'in WPGraphQL üzerinden headless mimaride entegre edildiği projede; atmosferik Three.js parçacık efektleri, mikroskobik büyüteç ve lightbox portallı premium ürün galerisi, Zustand tabanlı sepet yönetimi, PayTR ödeme entegrasyonu ve özel çift dilli (TR/EN) poetik çeviri sistemi yer almaktadır."
       }
     ],
     "github_btn": "GitHub",
