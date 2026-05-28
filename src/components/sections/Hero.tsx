@@ -5,9 +5,23 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { LocalizedPersonalInfo } from "@/lib/sanity.client";
 
-export function Hero() {
-  const t = useTranslations('Hero');
+interface HeroProps {
+  data?: LocalizedPersonalInfo | null;
+}
+
+export function Hero({ data }: HeroProps) {
+  const t = useTranslations("Hero");
+
+  // Fallback to local translations if Sanity content is not available
+  const name = data?.name || t("name");
+  const greeting = t("greeting");
+  const title = data?.title || t("title");
+  const subtitle = data?.subtitle || t("subtitle");
+  const description = data?.description || t("description");
+  const location = data?.location || t("location");
+  const cvLink = data?.cvLink || "/Evren-Keskin-Product-Manager-Product-Owner-CV.pdf";
 
   return (
     <section
@@ -21,9 +35,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight"
         >
-          {t('greeting')}{" "}
+          {greeting}{" "}
           <span className="text-gradient bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
-            {t('name')}
+            {name}
           </span>
         </motion.h1>
 
@@ -33,11 +47,11 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl text-white/70 mb-6 max-w-2xl mx-auto leading-relaxed"
         >
-          <span className="font-semibold text-white/90">{t('title')}</span>
+          <span className="font-semibold text-white/90">{title}</span>
           <br />
-          <span className="text-sm text-white/60">{t('subtitle')}</span>
+          <span className="text-sm text-white/60">{subtitle}</span>
           <br /><br />
-          {t('description')}
+          {description}
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +59,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.45 }}
           className="text-base text-white/50 mb-10"
         >
-          📍 {t('location')}
+          📍 {location}
         </motion.p>
 
         <motion.div
@@ -57,9 +71,9 @@ export function Hero() {
           <Link href="#projects">
             <Button
               size="lg"
-              className="rounded-full px-8 py-6 bg-white text-black hover:bg-white/90 font-medium text-base group"
+              className="rounded-full px-8 py-6 bg-white text-black hover:bg-white/90 font-medium text-base group cursor-pointer"
             >
-              {t('cta_projects')}
+              {t("cta_projects")}
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
@@ -67,23 +81,23 @@ export function Hero() {
             <Button
               size="lg"
               variant="ghost"
-              className="rounded-full px-8 py-6 bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 font-medium text-base"
+              className="rounded-full px-8 py-6 bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 font-medium text-base cursor-pointer"
             >
-              {t('cta_contact')}
+              {t("cta_contact")}
             </Button>
           </Link>
           <a
-            href="/Evren-Keskin-Product-Manager-Product-Owner-CV.pdf"
+            href={cvLink}
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button
               size="lg"
               variant="ghost"
-              className="rounded-full px-8 py-6 bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 font-medium text-base"
+              className="rounded-full px-8 py-6 bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 font-medium text-base cursor-pointer"
             >
               <Download className="mr-2 w-4 h-4" />
-              {t('cta_download_cv')}
+              {t("cta_download_cv")}
             </Button>
           </a>
         </motion.div>
@@ -97,7 +111,7 @@ export function Hero() {
         aria-hidden="true"
       >
         <span className="text-xs text-white/50 tracking-[0.3em] uppercase">
-          {t('scroll')}
+          {t("scroll")}
         </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}

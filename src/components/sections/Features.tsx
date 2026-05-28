@@ -3,47 +3,13 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
-import { Code, Database, Smartphone, Palette, Globe, Server } from "lucide-react";
+import { Code, Database, Smartphone, Palette, Globe, Server, Layers } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { LocalizedSkill } from "@/lib/sanity.client";
 
-const skills = [
-  {
-    icon: Code,
-    title: "Programming Languages",
-    description:
-      "Python, C# ve JavaScript ile güçlü programlama temelleri. Temiz ve ölçeklenebilir kod yazma konusunda deneyimliyim.",
-  },
-  {
-    icon: Server,
-    title: "Web Frameworks",
-    description:
-      "ASP.NET Core ve React.js ile modern web uygulamaları geliştiriyorum. Backend ve frontend entegrasyonu konusunda deneyimliyim.",
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile Development",
-    description:
-      "React Native ile mobil uygulama geliştirme deneyimim var. UI/UX best practices uygulayarak kullanıcı dostu arayüzler oluşturuyorum.",
-  },
-  {
-    icon: Database,
-    title: "Database & Data",
-    description:
-      "PostgreSQL ile veritabanı yönetimi. NumPy ve Pandas ile veri analizi ve işleme konularında deneyimliyim.",
-  },
-  {
-    icon: Palette,
-    title: "UI/UX Design",
-    description:
-      "Kullanıcı odaklı tasarım prensipleriyle modern ve kullanışlı arayüzler tasarlıyorum. Responsive ve erişilebilir tasarımlar oluşturuyorum.",
-  },
-  {
-    icon: Globe,
-    title: "Full Stack Development",
-    description:
-      ".NET ve React ile end-to-end web uygulama geliştirme. Frontend ve backend entegrasyonu konusunda kapsamlı deneyime sahibim.",
-  },
-];
+interface FeaturesProps {
+  data?: LocalizedSkill[] | null;
+}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -64,19 +30,17 @@ const itemVariants = {
   },
 };
 
-export function Features() {
-  const t = useTranslations('Features');
-  const items: any[] = t.raw('skills');
+const getIconForIndex = (index: number) => {
+  const icons = [Code, Server, Smartphone, Database, Palette, Globe, Layers];
+  return icons[index % icons.length];
+};
 
-  // Map translations to skills
-  const skillsList = [
-    { ...items[0], icon: Code },
-    { ...items[1], icon: Server },
-    { ...items[2], icon: Smartphone },
-    { ...items[3], icon: Database },
-    { ...items[4], icon: Palette },
-    { ...items[5], icon: Globe },
-  ];
+export function Features({ data }: FeaturesProps) {
+  const t = useTranslations("Features");
+  const fallbackItems: any[] = t.raw("skills");
+
+  // Load from Sanity, falling back to local files
+  const items = data && data.length > 0 ? data : fallbackItems;
 
   return (
     <SectionWrapper id="skills" className="relative">
@@ -87,7 +51,7 @@ export function Features() {
           viewport={{ once: true }}
           className="inline-block text-sm text-white/50 uppercase tracking-widest mb-4"
         >
-          {t('section_title')}
+          {t("section_title")}
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -96,7 +60,7 @@ export function Features() {
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
         >
-          {t('heading')}
+          {t("heading")}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -105,7 +69,7 @@ export function Features() {
           transition={{ delay: 0.2 }}
           className="text-white/60 max-w-2xl mx-auto"
         >
-          {t('subheading')}
+          {t("subheading")}
         </motion.p>
       </div>
 
@@ -116,21 +80,25 @@ export function Features() {
         viewport={{ once: true, margin: "-100px" }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {skillsList.map((skill, index) => (
-          <motion.div key={skill.title} variants={itemVariants}>
-            <GlassCard className="p-6 h-full group cursor-pointer">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
-                <skill.icon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {skill.title}
-              </h3>
-              <p className="text-sm text-white/60 leading-relaxed">
-                {skill.description}
-              </p>
-            </GlassCard>
-          </motion.div>
-        ))}
+        {items.map((skill, index) => {
+          const SkillIcon = getIconForIndex(index);
+
+          return (
+            <motion.div key={skill.title} variants={itemVariants}>
+              <GlassCard className="p-6 h-full group cursor-pointer">
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+                  <SkillIcon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {skill.title}
+                </h3>
+                <p className="text-sm text-white/60 leading-relaxed font-light">
+                  {skill.description}
+                </p>
+              </GlassCard>
+            </motion.div>
+          );
+        })}
       </motion.div>
     </SectionWrapper>
   );

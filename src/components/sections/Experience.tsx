@@ -5,6 +5,11 @@ import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { Briefcase, Calendar } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { LocalizedExperience } from "@/lib/sanity.client";
+
+interface ExperienceProps {
+  data?: LocalizedExperience[] | null;
+}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -25,10 +30,28 @@ const itemVariants = {
   },
 };
 
-export function Experience() {
-  const t = useTranslations('Experience');
-  // Re-creating the jobs array from translation array structure
-  const jobs: any[] = t.raw('jobs');
+export function Experience({ data }: ExperienceProps) {
+  const t = useTranslations("Experience");
+  const fallbackJobs: any[] = t.raw("jobs");
+
+  // Resilient fallback to local translations
+  const jobs = data && data.length > 0 ? data : fallbackJobs;
+
+  // Static tags fallback for local translation objects (which lack the tags list)
+  const getFallbackTags = (index: number) => {
+    switch (index) {
+      case 0:
+        return ["Product Management", "Backlog Prioritization", "Delivery"];
+      case 1:
+        return ["WordPress", "E-commerce", "Trendyol"];
+      case 2:
+        return ["Angular", "TypeScript", "UI Components"];
+      case 3:
+        return ["React Native", "UI/UX", "Mobile"];
+      default:
+        return [];
+    }
+  };
 
   return (
     <SectionWrapper id="experience" className="relative">
@@ -39,7 +62,7 @@ export function Experience() {
           viewport={{ once: true }}
           className="inline-block text-sm text-white/50 uppercase tracking-widest mb-4"
         >
-          {t('section_title')}
+          {t("section_title")}
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -48,7 +71,7 @@ export function Experience() {
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
         >
-          {t('heading')}
+          {t("heading")}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +80,7 @@ export function Experience() {
           transition={{ delay: 0.2 }}
           className="text-white/60 max-w-2xl mx-auto"
         >
-          {t('subheading')}
+          {t("subheading")}
         </motion.p>
       </div>
 
@@ -69,54 +92,56 @@ export function Experience() {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-6"
         >
-          {jobs.map((exp: any, index: number) => (
-            <motion.div key={index} variants={itemVariants}>
-              <GlassCard className="p-6 md:p-8 relative">
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
-                        <Briefcase className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-white">
-                          {exp.role}
-                        </h3>
-                        <p className="text-white/70">{exp.company}</p>
-                        {exp.location && (
-                          <p className="text-white/50 text-sm">{exp.location}</p>
-                        )}
+          {jobs.map((exp: any, index: number) => {
+            // Render tags from CMS list, otherwise fall back to static arrays
+            const tagsList = exp.tags && exp.tags.length > 0 ? exp.tags : getFallbackTags(index);
+
+            return (
+              <motion.div key={index} variants={itemVariants}>
+                <GlassCard className="p-6 md:p-8 relative">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
+                          <Briefcase className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold text-white">
+                            {exp.role}
+                          </h3>
+                          <p className="text-white/70">{exp.company}</p>
+                          {exp.location && (
+                            <p className="text-white/50 text-sm">{exp.location}</p>
+                          )}
+                        </div>
                       </div>
                     </div>
+                    <div className="flex items-center gap-2 text-white/50 text-sm">
+                      <Calendar className="w-4 h-4" />
+                      <span>{exp.period}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 text-white/50 text-sm">
-                    <Calendar className="w-4 h-4" />
-                    <span>{exp.period}</span>
-                  </div>
-                </div>
 
-                <p className="text-white/70 mb-4 leading-relaxed">
-                  {exp.description}
-                </p>
+                  <p className="text-white/70 mb-4 leading-relaxed font-light text-sm md:text-base">
+                    {exp.description}
+                  </p>
 
-                {/* Tags structure based on roles */}
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
-                  {index === 0 && ["Product Management", "Backlog Prioritization", "Delivery"].map(tech => (
-                      <span key={tech} className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10">{tech}</span>
-                  ))}
-                  {index === 1 && ["WordPress", "E-commerce", "Trendyol"].map(tech => (
-                      <span key={tech} className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10">{tech}</span>
-                  ))}
-                  {index === 2 && ["Angular", "TypeScript", "UI Components"].map(tech => (
-                      <span key={tech} className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10">{tech}</span>
-                  ))}
-                  {index === 3 && ["React Native", "UI/UX", "Mobile"].map(tech => (
-                      <span key={tech} className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10">{tech}</span>
-                  ))}
-                </div>
-              </GlassCard>
-            </motion.div>
-          ))}
+                  {tagsList.length > 0 && (
+                    <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                      {tagsList.map((tag: string) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70 border border-white/10"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </GlassCard>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </SectionWrapper>

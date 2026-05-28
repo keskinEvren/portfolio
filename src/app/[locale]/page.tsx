@@ -10,18 +10,38 @@ import { Projects } from "@/components/sections/Projects";
 import { Experience } from "@/components/sections/Experience";
 import { CTA } from "@/components/sections/CTA";
 
-export default function Home() {
+// Import localized Sanity API client functions
+import {
+  getPersonalInfo,
+  getExperienceList,
+  getProjectsList,
+  getSkillsList,
+} from "@/lib/sanity.client";
+
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function Home({ params }: PageProps) {
+  const { locale } = await params;
+
+  // Safely execute server-side CMS requests
+  const personalInfo = await getPersonalInfo(locale);
+  const experiences = await getExperienceList(locale);
+  const projects = await getProjectsList(locale);
+  const skills = await getSkillsList(locale);
+
   return (
     <>
       <VideoBackground />
       <Navbar />
       <main>
-        <Hero />
+        <Hero data={personalInfo} />
         <TechStack />
-        <About />
-        <Features />
-        <Projects />
-        <Experience />
+        <About data={personalInfo} />
+        <Features data={skills} />
+        <Projects data={projects} />
+        <Experience data={experiences} />
         <CTA />
       </main>
       <Footer />

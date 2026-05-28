@@ -19,6 +19,7 @@ export function LenisProvider({ children }: LenisProviderProps) {
     });
 
     lenisRef.current = lenis;
+    (window as any).lenis = lenis;
 
     let rafId: number;
 
@@ -32,6 +33,7 @@ export function LenisProvider({ children }: LenisProviderProps) {
     return () => {
       lenis.destroy();
       cancelAnimationFrame(rafId);
+      delete (window as any).lenis;
     };
   }, []);
 
