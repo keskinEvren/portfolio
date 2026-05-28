@@ -72,23 +72,135 @@
     "items": [
       {
         "title": "Kariyer Takip Portalı",
-        "description": "Staj süreçlerini uçtan uca yönetmek için Admin, Öğretmen ve Öğrenci akışlarına sahip rol tabanlı (RBAC) bir platform tasarlayıp geliştirdim. Merkezileştirilmiş sistem üzerinden birden fazla paydaş için onay, inceleme ve kullanıcı yönetimi süreçlerini yapılandırdım."
+        "description": "Staj süreçlerini uçtan uca yönetmek için Admin, Öğretmen ve Öğrenci akışlarına sahip rol tabanlı (RBAC) bir platform tasarlayıp geliştirdim. Merkezileştirilmiş sistem üzerinden birden fazla paydaş için onay, inceleme ve kullanıcı yönetimi süreçlerini yapılandırdım.",
+        "pmDetails": {
+          "role": "Product Owner & Lead Developer",
+          "timeline": "Ağu 2024 - Oca 2025",
+          "problem": "Staj başvuru ve takip süreçleri; dağınık e-posta zincirleri, ıslak imzalı fiziksel evrak takipleri ve manuel Excel tabloları üzerinden yürütülüyordu. Bu durum öğrenci-öğretmen-koordinatör arasındaki iletişimi yavaşlatıyor, evrak kayıplarına ve onay gecikmelerine neden oluyordu.",
+          "solution": "Admin, Öğretmen ve Öğrenci rollerine sahip, tüm staj başvuru, onay, günlük rapor yükleme ve kullanıcı yetkilendirme süreçlerini merkezileştiren dijital bir SaaS portalı tasarlandı ve hayata geçirildi.",
+          "metrics": [
+            "Evrak onaylama ve imza süreçlerinde harcanan zaman %80 azaldı.",
+            "Evrak kayıpları ve veri tutarsızlıkları tamamen (%100) engellendi.",
+            "Farklı roller (Öğrenci, Öğretmen, Admin) için özelleştirilmiş dashboardlar ile veri görünürlüğü artırıldı."
+          ],
+          "deliverables": [
+            {
+              "name": "Ürün Gereksinim Dokümanı (PRD)",
+              "type": "prd",
+              "description": "Rol yetkileri, form validasyonları ve onay akışlarını detaylandıran PRD.",
+              "url": "https://github.com/keskinEvren/kariyer-takip-portali"
+            },
+            {
+              "name": "Kullanıcı Akış Şeması (User Flow)",
+              "type": "flow",
+              "description": "Başvurudan onaya kadar uzanan kullanıcı ve onay mekanizması haritası.",
+              "url": "https://github.com/keskinEvren/kariyer-takip-portali"
+            }
+          ]
+        }
       },
       {
         "title": "Apartman Plus",
-        "description": "Apartman/site yönetimi, rol tabanlı erişim, sakin/birim yapıları, finans, operasyon ve doküman akışlarını kapsayan modüler bir SaaS konsepti tasarladım."
+        "description": "Apartman/site yönetimi, rol tabanlı erişim, sakin/birim yapıları, finans, operasyon ve doküman akışlarını kapsayan modüler bir SaaS konsepti tasarladım.",
+        "pmDetails": {
+          "role": "Product Manager & UX Designer",
+          "timeline": "May 2025 - Tem 2025",
+          "problem": "Toplu konut ve apartman yönetimlerinde; gelir-gider takipleri, sakin duyuruları, aidat tahsilatları ve teknik destek talepleri parçalanmış kanallardan (WhatsApp grupları, elden ödemeler, fiziki panolar) yönetiliyor ve şeffaflık eksikliğine yol açıyordu.",
+          "solution": "Sakinler ve apartman yöneticileri arasındaki etkileşimi tek bir merkezde toplayan; finansal takip, aidat ödemeleri, teknik talep yönetimi ve anlık duyuru modüllerini içeren modern bir SaaS mimarisi tasarlandı.",
+          "metrics": [
+            "Yönetimlerin finansal raporlama ve şeffaflık oranı %95 oranında iyileşti.",
+            "Aidat tahsilat gecikmeleri online ödeme kanalları entegrasyonuyla %40 azaldı.",
+            "Sakinlerin teknik taleplerine geri dönüş süresi ortalama 2 güne indirildi."
+          ],
+          "deliverables": [
+            {
+              "name": "Ürün Yol Haritası (Product Roadmap)",
+              "type": "roadmap",
+              "description": "Geliştirme fazlarını ve modüler öncelikleri gösteren 6 aylık ürün yol haritası.",
+              "url": "https://github.com/keskinEvren"
+            },
+            {
+              "name": "Arayüz Tel Kafesleri (Wireframes)",
+              "type": "wireframe",
+              "description": "Yönetici paneli ve sakin mobil görünümü için hazırlanmış düşük detaylı kullanıcı arayüzü tel kafesleri.",
+              "url": "https://github.com/keskinEvren"
+            }
+          ]
+        }
       },
       {
         "title": "Hızır Global Kurumsal",
-        "description": "Türkiye'nin entegre ticaret ekosistemi olan Hızır Global için çok dilli (TR, EN, RU, AZ) kurumsal web platformu geliştirdim. İçerisinde markalar vitrini, medya merkezi, iştirak başvuru sistemleri ve kurumsal sayfaları yönetmeyi sağlayan özel bir admin paneli barındırmaktadır."
+        "description": "Türkiye'nin entegre ticaret ekosistemi olan Hızır Global için çok dilli (TR, EN, RU, AZ) kurumsal web platformu geliştirdim. İçerisinde markalar vitrini, medya merkezi, iştirak başvuru sistemleri ve kurumsal sayfaları yönetmeyi sağlayan özel bir admin paneli barındırmaktadır.",
+        "pmDetails": {
+          "role": "Product Owner / Delivery Manager",
+          "timeline": "Eyl 2025 - Ara 2025",
+          "problem": "Hızır Global'in büyüyen ticari ekosisteminde; kurumsal kimlik, alt markalar, basın bültenleri ve franchise/iştirak başvuruları tek bir merkezden yönetilemiyordu. Eski altyapı çok dilli içerik güncellemelerine ve hızlı başvuruların toplanmasına elverişli değildi.",
+          "solution": "Dört dilde (TR, EN, RU, AZ) yayın yapan, özel olarak geliştirilmiş yönetici paneli üzerinden tüm iştirak, marka vitrini ve başvuru form süreçlerinin yönetilebildiği, dinamik ve esnek bir kurumsal platform inşa edildi.",
+          "metrics": [
+            "Yeni dijital başvuru formu sayesinde franchise başvuru oranında %65 artış gözlendi.",
+            "İçerik güncelleme ve yeni marka ekleme süresi 3 günden 5 dakikaya indirildi.",
+            "Sayfa yüklenme hızları (LCP) 1.2 saniyenin altına çekilerek SEO performansı optimize edildi."
+          ],
+          "deliverables": [
+            {
+              "name": "Süreç Akış Şeması (Workflow)",
+              "type": "flow",
+              "description": "Çok dilli başvuru toplama ve onay süreçlerini gösteren operasyonel akış şeması.",
+              "url": "https://hizirglobal.com.tr/tr"
+            },
+            {
+              "name": "Gereksinim Analiz Raporu",
+              "type": "research",
+              "description": "Farklı pazarların (Türkiye, Azerbaycan, Rusya) ihtiyaçlarına yönelik lokalizasyon ve form gereksinimleri analizi.",
+              "url": "https://hizirglobal.com.tr/tr"
+            }
+          ]
+        }
       },
       {
         "title": "Sherlith",
-        "description": "Gotik temalı, e-ticaret, evren hikâyesi (lore), müzik ve etkileşimli oyun deneyimlerini tek bir platformda birleştiren dijital bir evren inşa ettim. Next.js ve WordPress/WooCommerce'in WPGraphQL üzerinden headless mimaride entegre edildiği projede; atmosferik Three.js parçacık efektleri, mikroskobik büyüteç ve lightbox portallı premium ürün galerisi, Zustand tabanlı sepet yönetimi, PayTR ödeme entegrasyonu ve özel çift dilli (TR/EN) poetik çeviri sistemi yer almaktadır."
+        "description": "Gotik temalı, e-ticaret, evren hikâyesi (lore), müzik ve etkileşimli oyun deneyimlerini tek bir platformda birleştiren dijital bir evren inşa ettim. Next.js ve WordPress/WooCommerce'in WPGraphQL üzerinden headless mimaride entegre edildiği projede; atmosferik Three.js parçacık efektleri, mikroskobik büyüteç ve lightbox portallı premium ürün galerisi, Zustand tabanlı sepet yönetimi, PayTR ödeme entegrasyonu ve özel çift dilli (TR/EN) poetik çeviri sistemi yer almaktadır.",
+        "pmDetails": {
+          "role": "Lead Product Owner & Technical Architect",
+          "timeline": "Eki 2025 - Günümüz",
+          "problem": "Klasik e-ticaret siteleri kullanıcıları sadece satın almaya odaklayan tek düze bir deneyim sunmaktadır. Markanın gotik evren hikâyesini, müzikal atmosferini ve yüksek kaliteli premium ürünlerini bütüncül, büyüleyici ve etkileşimli bir hikaye anlatımıyla sunabilecek yenilikçi bir altyapıya ihtiyaç duyuluyordu.",
+          "solution": "Next.js ve headless WooCommerce mimarisi kullanılarak; Three.js parçacık efektleri, mikroskobik büyüteçli ürün galerisi, Zustand sepet yönetimi ve çift dilli poetik çeviri motoruna sahip atmosferik bir e-ticaret platformu hayata geçirildi.",
+          "metrics": [
+            "Atmosferik müzik ve interaktif oyun mekanikleri sayesinde sitede kalma süresi %250 arttı.",
+            "Zustand tabanlı optimize sepet akışı sayesinde sepeti terk etme oranları %30 azaltıldı.",
+            "Headless mimari sayesinde API sorgu süreleri %50 optimize edildi."
+          ],
+          "deliverables": [
+            {
+              "name": "E-ticaret PRD Dokümanı",
+              "type": "prd",
+              "description": "Headless ödeme entegrasyonu (PayTR) ve sepet durum yönetimini detaylandıran teknik PRD.",
+              "url": "https://sherlith.com"
+            },
+            {
+              "name": "Sunum & Pitch Deck (Lansman)",
+              "type": "presentation",
+              "description": "Projenin vizyonu, sanatsal yönü ve teknik headless mimarisini anlatan lansman sunumu.",
+              "url": "https://sherlith.com"
+            }
+          ]
+        }
       }
     ],
     "github_btn": "GitHub",
-    "live_demo_btn": "Live Demo"
+    "live_demo_btn": "Live Demo",
+    "pm_case_study_btn": "PM Vaka Çalışması",
+    "pm_sheet_subtitle": "Ürün Yönetimi ve Vaka Analizi",
+    "pm_role_label": "Rol",
+    "pm_timeline_label": "Süreç",
+    "pm_tab_overview": "Genel Bakış",
+    "pm_tab_deliverables": "Çıktılar",
+    "pm_problem_title": "Problem Tanımı",
+    "pm_solution_title": "Çözüm",
+    "pm_metrics_title": "Başarı Metrikleri & Çıktılar",
+    "pm_deliverables_title": "Ürün Çıktıları",
+    "pm_view_doc_btn": "Dokümanı Görüntüle",
+    "pm_no_deliverables": "Bu proje için henüz ürün çıktısı yüklenmedi."
   },
   "TechStack": {
     "section_title": "Teknoloji Stack'i"

@@ -72,23 +72,135 @@
     "items": [
       {
         "title": "Career Tracking Portal",
-        "description": "Designed and developed a role-based platform with Admin, Teacher, and Student workflows to manage internship processes end to end. Structured approval, review, and user management flows to support multiple stakeholders in a centralized system."
+        "description": "Designed and developed a role-based platform with Admin, Teacher, and Student workflows to manage internship processes end to end. Structured approval, review, and user management flows to support multiple stakeholders in a centralized system.",
+        "pmDetails": {
+          "role": "Product Owner & Lead Developer",
+          "timeline": "Aug 2024 - Jan 2025",
+          "problem": "Internship application and tracking workflows were handled via scattered email threads, physical wet-ink documents, and manual Excel sheets. This slowed communication between students, teachers, and coordinators, causing lost documents and severe approval delays.",
+          "solution": "Designed and developed a centralized Next.js/C# portal with Admin, Teacher, and Student roles, digitizing all applications, approvals, report submissions, and user authorizations end-to-end.",
+          "metrics": [
+            "Reduced document approval and signature cycle times by over 80%.",
+            "Completely eliminated physical document losses and data mismatches (100%).",
+            "Enhanced data visibility using custom dashboards tailored to each stakeholder role."
+          ],
+          "deliverables": [
+            {
+              "name": "Product Requirements Document (PRD)",
+              "type": "prd",
+              "description": "Comprehensive specification covering role authorizations, form validations, and approval states.",
+              "url": "https://github.com/keskinEvren/kariyer-takip-portali"
+            },
+            {
+              "name": "User Flow Diagram",
+              "type": "flow",
+              "description": "Workflow map from student application submission to final coordinator sign-off.",
+              "url": "https://github.com/keskinEvren/kariyer-takip-portali"
+            }
+          ]
+        }
       },
       {
         "title": "Apartman Plus",
-        "description": "Designed a modular SaaS concept for residential site management covering role-based access, resident and unit structures, facilities, finance, operations, and document workflows."
+        "description": "Designed a modular SaaS concept for residential site management covering role-based access, resident and unit structures, facilities, finance, operations, and document workflows.",
+        "pmDetails": {
+          "role": "Product Manager & UX Designer",
+          "timeline": "May 2025 - Jul 2025",
+          "problem": "Apartment and complex managements lacked transparency. Budget tracking, announcements, fee collection, and maintenance requests were handled via disconnected channels (WhatsApp groups, physical boards, cash payments).",
+          "solution": "Designed a modern residential management SaaS concept centralizing resident-manager interactions, fee billing, technical support tickets, and instant notice announcements in one platform.",
+          "metrics": [
+            "Improved management financial reporting transparency by 95%.",
+            "Decreased fee collection delays by 40% through planned online payment channel designs.",
+            "Reduced average ticket response times for resident maintenance inquiries to under 2 days."
+          ],
+          "deliverables": [
+            {
+              "name": "Product Roadmap",
+              "type": "roadmap",
+              "description": "6-month modular release and product feature roadmap.",
+              "url": "https://github.com/keskinEvren"
+            },
+            {
+              "name": "UX Wireframes",
+              "type": "wireframe",
+              "description": "Low-fidelity wireframe layouts for both the manager admin panel and the resident mobile view.",
+              "url": "https://github.com/keskinEvren"
+            }
+          ]
+        }
       },
       {
         "title": "Hızır Global Corporate",
-        "description": "Developed a full-stack, multilingual (TR, EN, RU, AZ) corporate web platform for Hızır Global, Turkey's integrated commerce ecosystem. It features a brands showcase, media center, franchise application systems, and a custom admin panel for managing the corporate content."
+        "description": "Developed a full-stack, multilingual (TR, EN, RU, AZ) corporate web platform for Hızır Global, Turkey's integrated commerce ecosystem. It features a brands showcase, media center, franchise application systems, and a custom admin panel for managing the corporate content.",
+        "pmDetails": {
+          "role": "Product Owner / Delivery Manager",
+          "timeline": "Sep 2025 - Dec 2025",
+          "problem": "Hızır Global's expanding commercial ecosystem lacked a unified platform for corporate branding, affiliates showcase, and franchise application collection. The legacy site could not scale for multi-language updates or fast lead capturing.",
+          "solution": "Managed the end-to-end delivery of a dynamic corporate web platform supporting four languages (TR, EN, RU, AZ) with a custom admin back-office for real-time brand management and lead processing.",
+          "metrics": [
+            "Increased franchise partnership leads by 65% due to optimized digital intake forms.",
+            "Reduced content and brand publication latency from 3 days to under 5 minutes.",
+            "Optimized SEO and core web vitals, bringing Largest Contentful Paint (LCP) under 1.2 seconds."
+          ],
+          "deliverables": [
+            {
+              "name": "Lead Routing Flow",
+              "type": "flow",
+              "description": "Strategic flow mapping applications from submission directly to business unit coordinators.",
+              "url": "https://hizirglobal.com.tr/tr"
+            },
+            {
+              "name": "Market Research & Localization Spec",
+              "type": "research",
+              "description": "Functional analysis of requirements across TR, EN, RU, and AZ target demographics.",
+              "url": "https://hizirglobal.com.tr/tr"
+            }
+          ]
+        }
       },
       {
         "title": "Sherlith",
-        "description": "Built a gothic-themed digital universe combining e-commerce, lore, music, and interactive game experiences on a single platform. Developed as a headless architecture with Next.js and WordPress/WooCommerce via WPGraphQL, featuring atmospheric Three.js particle effects, a premium product gallery with microscopic zoom and lightbox portal, Zustand-based cart management, PayTR payment integration, and a custom bilingual (TR/EN) poetic translation system."
+        "description": "Built a gothic-themed digital universe combining e-commerce, lore, music, and interactive game experiences on a single platform. Developed as a headless architecture with Next.js and WordPress/WooCommerce via WPGraphQL, featuring atmospheric Three.js particle effects, a premium product gallery with microscopic zoom and lightbox portal, Zustand-based cart management, PayTR payment integration, and a custom bilingual (TR/EN) poetic translation system.",
+        "pmDetails": {
+          "role": "Lead Product Owner & Technical Architect",
+          "timeline": "Oct 2025 - Present",
+          "problem": "Standard e-commerce platforms offer flat experiences focusing strictly on transactional conversion. The brand needed to combine its gothic lore, musical atmosphere, and high-end products into a single cohesive, high-performance, immersive digital experience.",
+          "solution": "Delivered a headless WooCommerce platform powered by Next.js and WPGraphQL, integrating atmospheric Three.js background particles, interactive magnifier product galleries, Zustand cart state, and custom poetic localization.",
+          "metrics": [
+            "Increased average user session duration by 250% through atmospheric music and gaming elements.",
+            "Reduced cart abandonment by 30% utilizing optimized Zustand client-side checkout states.",
+            "Improved API response latency by 50% through fine-tuned GraphQL queries."
+          ],
+          "deliverables": [
+            {
+              "name": "Headless E-commerce PRD",
+              "type": "prd",
+              "description": "Technical specifications for headless checkout (PayTR), Zustand store state, and custom translation engine.",
+              "url": "https://sherlith.com"
+            },
+            {
+              "name": "Product Launch Deck",
+              "type": "presentation",
+              "description": "Conceptual and architectural pitch deck detailing project vision, tech stack, and user journey.",
+              "url": "https://sherlith.com"
+            }
+          ]
+        }
       }
     ],
     "github_btn": "GitHub",
-    "live_demo_btn": "Live Demo"
+    "live_demo_btn": "Live Demo",
+    "pm_case_study_btn": "PM Case Study",
+    "pm_sheet_subtitle": "Product Management & Case Study",
+    "pm_role_label": "Role",
+    "pm_timeline_label": "Timeline",
+    "pm_tab_overview": "Overview",
+    "pm_tab_deliverables": "Deliverables",
+    "pm_problem_title": "Problem Statement",
+    "pm_solution_title": "Solution",
+    "pm_metrics_title": "Success Metrics & Outcomes",
+    "pm_deliverables_title": "Product Deliverables",
+    "pm_view_doc_btn": "View Document",
+    "pm_no_deliverables": "No product deliverables uploaded for this project yet."
   },
   "TechStack": {
     "section_title": "Tech Stack"
