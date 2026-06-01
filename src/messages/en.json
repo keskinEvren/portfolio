@@ -100,30 +100,30 @@
         }
       },
       {
-        "title": "Apartman Plus",
-        "description": "Designed a modular SaaS concept for residential site management covering role-based access, resident and unit structures, facilities, finance, operations, and document workflows.",
+        "title": "komşu.site",
+        "description": "Developed a premium B2B SaaS Resident Portal designed to streamline modern residential, high-rise, and apartment complex operations, featuring multi-unit support and conflict-free facility booking algorithms.",
         "pmDetails": {
-          "role": "Product Manager & UX Designer",
-          "timeline": "May 2025 - Jul 2025",
-          "problem": "Apartment and complex managements lacked transparency. Budget tracking, announcements, fee collection, and maintenance requests were handled via disconnected channels (WhatsApp groups, physical boards, cash payments).",
-          "solution": "Designed a modern residential management SaaS concept centralizing resident-manager interactions, fee billing, technical support tickets, and instant notice announcements in one platform.",
+          "role": "Product Manager & Lead Developer",
+          "timeline": "May 2025 - Present",
+          "problem": "Apartment and complex managements lacked transparency and efficiency. Fee tracking, announcements, maintenance tickets, and facility reservations were handled via disconnected channels, causing data fragmentation, scheduling conflicts, and communication gaps.",
+          "solution": "Developed an end-to-end type-safe SaaS platform built with Next.js 15 and tRPC v11. Implemented a unique multi-unit switcher using `x-membership-id` context routing and a robust reservation engine powered by PostgreSQL Row-Level SELECT FOR UPDATE concurrency locking.",
           "metrics": [
-            "Improved management financial reporting transparency by 95%.",
-            "Decreased fee collection delays by 40% through planned online payment channel designs.",
-            "Reduced average ticket response times for resident maintenance inquiries to under 2 days."
+            "Enabled residents to manage multiple active properties (owner, tenant, etc.) seamlessly under a single account.",
+            "Achieved a 100% conflict-free facility booking rate by eliminating double-booking via transactional row locking.",
+            "Enhanced resident satisfaction and engagement through a premium glassmorphic UI with micro-interactions."
           ],
           "deliverables": [
             {
-              "name": "Product Roadmap",
+              "name": "Product Development Roadmap",
               "type": "roadmap",
-              "description": "6-month modular release and product feature roadmap.",
-              "url": "https://github.com/keskinEvren"
+              "description": "A 4-phase strategic roadmap detailing multi-unit infrastructure, booking concurrency, notifications matrix, and security grids.",
+              "url": "https://github.com/keskinEvren/apartman-plus-resident-ops"
             },
             {
-              "name": "UX Wireframes",
-              "type": "wireframe",
-              "description": "Low-fidelity wireframe layouts for both the manager admin panel and the resident mobile view.",
-              "url": "https://github.com/keskinEvren"
+              "name": "Database ERD & Concurrency Spec",
+              "type": "flow",
+              "description": "Relational schema for memberships and sequence diagrams representing transactional locking flows.",
+              "url": "https://github.com/keskinEvren/apartman-plus-resident-ops"
             }
           ]
         }

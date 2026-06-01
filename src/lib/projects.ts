@@ -31,7 +31,9 @@ export const projectsConfig: ProjectStaticConfig[] = [
   },
   {
     id: "apartman-plus",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "tRPC"],
+    technologies: ["Next.js 15", "React 19", "TypeScript", "tRPC v11", "PostgreSQL", "Drizzle ORM", "Tailwind CSS"],
+    github: "https://github.com/keskinEvren/apartman-plus-resident-ops",
+    live: "https://www.komsu.site/",
     hasPmDetails: true,
   },
   {

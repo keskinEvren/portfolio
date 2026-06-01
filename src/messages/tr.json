@@ -100,30 +100,30 @@
         }
       },
       {
-        "title": "Apartman Plus",
-        "description": "Apartman/site yönetimi, rol tabanlı erişim, sakin/birim yapıları, finans, operasyon ve doküman akışlarını kapsayan modüler bir SaaS konsepti tasarladım.",
+        "title": "komşu.site",
+        "description": "Modern rezidans, toplu konut ve apartman yaşam operasyonlarını kolaylaştırmak için tasarlanmış, çoklu mülk (multi-unit) desteği ve çakışmasız rezervasyon algoritmalarına sahip premium bir B2B SaaS Resident Portal ürünü geliştirdim.",
         "pmDetails": {
-          "role": "Product Manager & UX Designer",
-          "timeline": "May 2025 - Tem 2025",
-          "problem": "Toplu konut ve apartman yönetimlerinde; gelir-gider takipleri, sakin duyuruları, aidat tahsilatları ve teknik destek talepleri parçalanmış kanallardan (WhatsApp grupları, elden ödemeler, fiziki panolar) yönetiliyor ve şeffaflık eksikliğine yol açıyordu.",
-          "solution": "Sakinler ve apartman yöneticileri arasındaki etkileşimi tek bir merkezde toplayan; finansal takip, aidat ödemeleri, teknik talep yönetimi ve anlık duyuru modüllerini içeren modern bir SaaS mimarisi tasarlandı.",
+          "role": "Product Manager & Lead Developer",
+          "timeline": "May 2025 - Günümüz",
+          "problem": "Toplu konut ve apartman yönetimlerinde; gelir-gider takipleri, sakin duyuruları, aidat tahsilatları, teknik destek talepleri ve sosyal tesis rezervasyonları parçalanmış kanallardan yönetiliyor, bu da veri dağınıklığına, çakışmalara ve şeffaflık eksikliğine yol açıyordu.",
+          "solution": "Çoklu mülk desteği (x-membership-id) ile sakinlerin tek tıklamayla daireler arası geçiş yapabildiği, PostgreSQL Row-Level SELECT FOR UPDATE kilitleme mimarisine sahip çakışmasız rezervasyon motoru barındıran ve Next.js 15 + tRPC v11 tabanlı uçtan uca tip güvenli bir SaaS platformu geliştirildi.",
           "metrics": [
-            "Yönetimlerin finansal raporlama ve şeffaflık oranı %95 oranında iyileşti.",
-            "Aidat tahsilat gecikmeleri online ödeme kanalları entegrasyonuyla %40 azaldı.",
-            "Sakinlerin teknik taleplerine geri dönüş süresi ortalama 2 güne indirildi."
+            "Çoklu mülk desteği sayesinde sakinler tek bir hesap altından tüm dairelerini anlık olarak yönetebilmektedir.",
+            "SELECT FOR UPDATE mimarisi ile eşzamanlı rezervasyon isteklerinde çakışma ve mükerrer kayıt riski %100 sıfırlandı.",
+            "Premium Glassmorphism tasarımı ve mikro animasyonlar ile kullanıcı etkileşim oranları önemli ölçüde artırıldı."
           ],
           "deliverables": [
             {
-              "name": "Ürün Yol Haritası (Product Roadmap)",
-              "type": "roadmap",
-              "description": "Geliştirme fazlarını ve modüler öncelikleri gösteren 6 aylık ürün yol haritası.",
-              "url": "https://github.com/keskinEvren"
+              "name": "Çoklu Mülk İlişkisel Şeması (ERD)",
+              "type": "flow",
+              "description": "Birden fazla üyeliğin (sakin, kiracı vb.) tek bir hesapla yönetilmesini sağlayan veritabanı ilişkisel şeması.",
+              "url": "https://github.com/keskinEvren/apartman-plus-resident-ops"
             },
             {
-              "name": "Arayüz Tel Kafesleri (Wireframes)",
-              "type": "wireframe",
-              "description": "Yönetici paneli ve sakin mobil görünümü için hazırlanmış düşük detaylı kullanıcı arayüzü tel kafesleri.",
-              "url": "https://github.com/keskinEvren"
+              "name": "Rezervasyon Concurrency Akış Şeması",
+              "type": "flow",
+              "description": "Eşzamanlı rezervasyon isteklerinde PostgreSQL Row-Level kilitleme akışını detaylandıran sequence diyagramı.",
+              "url": "https://github.com/keskinEvren/apartman-plus-resident-ops"
             }
           ]
         }
