@@ -6,7 +6,7 @@ export const personalData = {
   description:
     "React ve .NET ile modern web uygulamaları geliştiriyorum. Kullanıcı odaklı, responsive arayüzler tasarlıyorum ve temiz, ölçeklenebilir kod yazıyorum.",
   cvLink:
-    "https://drive.google.com/file/d/1HgfhiXAinkoMHuPzOxJrLqXJV7BC5EJp/view?usp=sharing",
+    "https://drive.google.com/uc?export=download&id=1NEVDz7Cp0n8fn07buruJ2ZAn6UVjvTh0",
   social: {
     github: "https://github.com/evrenkeskin", // Placeholder
     linkedin: "https://linkedin.com/in/evrenkeskin", // Placeholder

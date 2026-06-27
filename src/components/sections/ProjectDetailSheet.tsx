@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Sheet,
@@ -26,8 +26,23 @@ import {
   ChevronRight,
   TrendingUp,
   FileDown,
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import dynamic from "next/dynamic";
+
+const MarkdownViewer = dynamic(
+  () => import("@/components/shared/MarkdownViewer").then((mod) => mod.MarkdownViewer),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex flex-col items-center justify-center p-12 space-y-4">
+        <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+      </div>
+    ),
+  }
+);
 
 interface PMDeliverable {
   name: string;
@@ -83,6 +98,41 @@ export function ProjectDetailSheet({
 }: ProjectDetailSheetProps) {
   const t = useTranslations("Projects");
   const [activeTab, setActiveTab] = useState<"overview" | "deliverables">("overview");
+
+  const [markdownContent, setMarkdownContent] = useState<string>("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [fetchError, setFetchError] = useState<string | null>(null);
+  const docCache = useRef<Record<string, string>>({});
+
+  const handleViewDocument = async (url: string, name: string) => {
+    setModalTitle(name);
+    setIsModalOpen(true);
+    setFetchError(null);
+
+    if (docCache.current[url]) {
+      setMarkdownContent(docCache.current[url]);
+      setIsLoading(false);
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to load document: ${response.statusText}`);
+      }
+      const text = await response.text();
+      docCache.current[url] = text;
+      setMarkdownContent(text);
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : "Failed to fetch document";
+      setFetchError(message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined" && (window as any).lenis) {
@@ -304,17 +354,29 @@ export function ProjectDetailSheet({
                           {doc.description}
                         </p>
 
-                        <Button
-                          className={cn(
-                            "w-full rounded-xl py-2 bg-white text-black hover:bg-white/90 transition-all text-xs font-medium flex items-center justify-center gap-2"
-                          )}
-                          asChild
-                        >
-                          <a href={doc.url} target="_blank" rel="noopener noreferrer">
+                        {doc.url.startsWith("/") && doc.url.endsWith(".md") ? (
+                          <Button
+                            className={cn(
+                              "w-full rounded-xl py-2 bg-white text-black hover:bg-white/90 transition-all text-xs font-medium flex items-center justify-center gap-2 cursor-pointer"
+                            )}
+                            onClick={() => handleViewDocument(doc.url, doc.name)}
+                          >
                             {t("pm_view_doc_btn")}
                             <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                          </a>
-                        </Button>
+                          </Button>
+                        ) : (
+                          <Button
+                            className={cn(
+                              "w-full rounded-xl py-2 bg-white text-black hover:bg-white/90 transition-all text-xs font-medium flex items-center justify-center gap-2"
+                            )}
+                            asChild
+                          >
+                            <a href={doc.url} target="_blank" rel="noopener noreferrer">
+                              {t("pm_view_doc_btn")}
+                              <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                            </a>
+                          </Button>
+                        )}
                       </motion.div>
                     ))}
                   </div>
@@ -329,6 +391,65 @@ export function ProjectDetailSheet({
           </AnimatePresence>
         </div>
       </SheetContent>
+
+      {/* Markdown Document Viewer Modal */}
+      <DialogPrimitive.Root open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogPrimitive.Portal>
+          <DialogPrimitive.Overlay className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
+          <DialogPrimitive.Content 
+            className={cn(
+              "fixed left-[50%] top-[50%] z-[101] w-[95%] sm:w-full sm:max-w-3xl translate-x-[-50%] translate-y-[-50%] p-0 outline-none",
+              "h-[80vh] flex flex-col pointer-events-auto border border-white/10 bg-black/45 backdrop-blur-3xl text-white rounded-2xl shadow-2xl overflow-hidden",
+              "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-1/2 data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-1/2 duration-300"
+            )}
+          >
+            {/* Glow effects inside the dialog */}
+            <div className="absolute top-[-10%] right-[-10%] w-[300px] h-[300px] bg-white/[0.01] rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] bg-white/[0.01] rounded-full blur-[80px] pointer-events-none" />
+
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-white/10 relative z-10">
+              <div>
+                <DialogPrimitive.Title className="text-lg md:text-xl font-bold tracking-tight text-white">
+                  {modalTitle}
+                </DialogPrimitive.Title>
+                <DialogPrimitive.Description className="text-white/40 text-xs mt-1">
+                  {t("pm_sheet_subtitle")}
+                </DialogPrimitive.Description>
+              </div>
+              <DialogPrimitive.Close className="p-1.5 rounded-full bg-white/10 text-white opacity-85 hover:opacity-100 hover:bg-white/20 transition-all focus:outline-none cursor-pointer">
+                <X className="w-4 h-4" />
+                <span className="sr-only">Close</span>
+              </DialogPrimitive.Close>
+            </div>
+
+            {/* Scrollable Content */}
+            <div 
+              className="flex-1 overflow-y-auto custom-scrollbar p-6 md:p-8 relative z-10"
+              data-lenis-prevent
+            >
+              {isLoading ? (
+                <div className="flex flex-col items-center justify-center h-full min-h-[200px] space-y-4">
+                  <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+                  <p className="text-xs text-white/40">{t("pm_loading")}</p>
+                </div>
+              ) : fetchError ? (
+                <div className="flex flex-col items-center justify-center h-full min-h-[200px] space-y-2 text-red-400">
+                  <p className="text-sm font-semibold">{fetchError}</p>
+                  <p className="text-xs text-white/40">{t("pm_error_retry")}</p>
+                </div>
+              ) : markdownContent.trim() === "" ? (
+                <div className="flex flex-col items-center justify-center h-full min-h-[200px] space-y-2">
+                  <FileText className="w-10 h-10 text-white/20" />
+                  <p className="text-sm text-white/40">{t("pm_empty_doc")}</p>
+                </div>
+              ) : (
+                <MarkdownViewer content={markdownContent} />
+              )}
+            </div>
+          </DialogPrimitive.Content>
+        </DialogPrimitive.Portal>
+      </DialogPrimitive.Root>
     </Sheet>
   );
 }

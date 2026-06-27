@@ -88,13 +88,13 @@
               "name": "Product Requirements Document (PRD)",
               "type": "prd",
               "description": "Comprehensive specification covering role authorizations, form validations, and approval states.",
-              "url": "https://github.com/keskinEvren/kariyer-takip-portali"
+              "url": "/docs/kariyer-takip-prd.md"
             },
             {
               "name": "User Flow Diagram",
               "type": "flow",
               "description": "Workflow map from student application submission to final coordinator sign-off.",
-              "url": "https://github.com/keskinEvren/kariyer-takip-portali"
+              "url": "/docs/kariyer-takip-flow.md"
             }
           ]
         }
@@ -114,16 +114,16 @@
           ],
           "deliverables": [
             {
-              "name": "Product Development Roadmap",
-              "type": "roadmap",
-              "description": "A 4-phase strategic roadmap detailing multi-unit infrastructure, booking concurrency, notifications matrix, and security grids.",
-              "url": "https://github.com/keskinEvren/apartman-plus-resident-ops"
+              "name": "Database Relation Schema (ERD)",
+              "type": "flow",
+              "description": "Database schema showing multi-unit relationship structure for managing multiple properties with a single account.",
+              "url": "/docs/apartman-plus-erd.md"
             },
             {
-              "name": "Database ERD & Concurrency Spec",
+              "name": "Reservation Concurrency Sequence Diagram",
               "type": "flow",
-              "description": "Relational schema for memberships and sequence diagrams representing transactional locking flows.",
-              "url": "https://github.com/keskinEvren/apartman-plus-resident-ops"
+              "description": "Sequence diagram representing PostgreSQL row-level transaction locking flows for overlapping facility bookings.",
+              "url": "/docs/apartman-plus-concurrency.md"
             }
           ]
         }
@@ -146,13 +146,13 @@
               "name": "Lead Routing Flow",
               "type": "flow",
               "description": "Strategic flow mapping applications from submission directly to business unit coordinators.",
-              "url": "https://hizirglobal.com.tr/tr"
+              "url": "/docs/hizir-global-flow.md"
             },
             {
               "name": "Market Research & Localization Spec",
               "type": "research",
               "description": "Functional analysis of requirements across TR, EN, RU, and AZ target demographics.",
-              "url": "https://hizirglobal.com.tr/tr"
+              "url": "/docs/hizir-global-requirements.md"
             }
           ]
         }
@@ -175,13 +175,13 @@
               "name": "Headless E-commerce PRD",
               "type": "prd",
               "description": "Technical specifications for headless checkout (PayTR), Zustand store state, and custom translation engine.",
-              "url": "https://sherlith.com"
+              "url": "/docs/sherlith-prd.md"
             },
             {
               "name": "Product Launch Deck",
               "type": "presentation",
               "description": "Conceptual and architectural pitch deck detailing project vision, tech stack, and user journey.",
-              "url": "https://sherlith.com"
+              "url": "/docs/sherlith-presentation.md"
             }
           ]
         }
@@ -200,7 +200,10 @@
     "pm_metrics_title": "Success Metrics & Outcomes",
     "pm_deliverables_title": "Product Deliverables",
     "pm_view_doc_btn": "View Document",
-    "pm_no_deliverables": "No product deliverables uploaded for this project yet."
+    "pm_no_deliverables": "No product deliverables uploaded for this project yet.",
+    "pm_loading": "Loading...",
+    "pm_error_retry": "Please try again later.",
+    "pm_empty_doc": "This document has no content yet."
   },
   "TechStack": {
     "section_title": "Tech Stack"

@@ -73,9 +73,8 @@ export function Hero() {
             </Button>
           </Link>
           <a
-            href="/Evren-Keskin-Product-Manager-Product-Owner-CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://drive.google.com/uc?export=download&id=1NEVDz7Cp0n8fn07buruJ2ZAn6UVjvTh0"
+            download
           >
             <Button
               size="lg"

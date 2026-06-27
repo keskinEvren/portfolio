@@ -38,9 +38,11 @@ export function Projects() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   // Maps static metadata with translated text from next-intl (including pmDetails)
-  const projects = fallbackItems.map((item, index) => {
-    const config = projectsConfig[index] || {
-      id: `project-${index}`,
+  // Uses id-based lookup instead of index to prevent breakage if JSON order changes
+  const projects = fallbackItems.map((item: any, index: number) => {
+    const itemId = item.id || projectsConfig[index]?.id || `project-${index}`;
+    const config = projectsConfig.find((c) => c.id === itemId) || {
+      id: itemId,
       technologies: [],
       github: "#",
       live: "#",

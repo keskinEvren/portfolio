@@ -88,13 +88,13 @@
               "name": "Ürün Gereksinim Dokümanı (PRD)",
               "type": "prd",
               "description": "Rol yetkileri, form validasyonları ve onay akışlarını detaylandıran PRD.",
-              "url": "https://github.com/keskinEvren/kariyer-takip-portali"
+              "url": "/docs/kariyer-takip-prd.md"
             },
             {
               "name": "Kullanıcı Akış Şeması (User Flow)",
               "type": "flow",
               "description": "Başvurudan onaya kadar uzanan kullanıcı ve onay mekanizması haritası.",
-              "url": "https://github.com/keskinEvren/kariyer-takip-portali"
+              "url": "/docs/kariyer-takip-flow.md"
             }
           ]
         }
@@ -117,13 +117,13 @@
               "name": "Çoklu Mülk İlişkisel Şeması (ERD)",
               "type": "flow",
               "description": "Birden fazla üyeliğin (sakin, kiracı vb.) tek bir hesapla yönetilmesini sağlayan veritabanı ilişkisel şeması.",
-              "url": "https://github.com/keskinEvren/apartman-plus-resident-ops"
+              "url": "/docs/apartman-plus-erd.md"
             },
             {
               "name": "Rezervasyon Concurrency Akış Şeması",
               "type": "flow",
               "description": "Eşzamanlı rezervasyon isteklerinde PostgreSQL Row-Level kilitleme akışını detaylandıran sequence diyagramı.",
-              "url": "https://github.com/keskinEvren/apartman-plus-resident-ops"
+              "url": "/docs/apartman-plus-concurrency.md"
             }
           ]
         }
@@ -146,13 +146,13 @@
               "name": "Süreç Akış Şeması (Workflow)",
               "type": "flow",
               "description": "Çok dilli başvuru toplama ve onay süreçlerini gösteren operasyonel akış şeması.",
-              "url": "https://hizirglobal.com.tr/tr"
+              "url": "/docs/hizir-global-flow.md"
             },
             {
               "name": "Gereksinim Analiz Raporu",
               "type": "research",
               "description": "Farklı pazarların (Türkiye, Azerbaycan, Rusya) ihtiyaçlarına yönelik lokalizasyon ve form gereksinimleri analizi.",
-              "url": "https://hizirglobal.com.tr/tr"
+              "url": "/docs/hizir-global-requirements.md"
             }
           ]
         }
@@ -175,13 +175,13 @@
               "name": "E-ticaret PRD Dokümanı",
               "type": "prd",
               "description": "Headless ödeme entegrasyonu (PayTR) ve sepet durum yönetimini detaylandıran teknik PRD.",
-              "url": "https://sherlith.com"
+              "url": "/docs/sherlith-prd.md"
             },
             {
               "name": "Sunum & Pitch Deck (Lansman)",
               "type": "presentation",
               "description": "Projenin vizyonu, sanatsal yönü ve teknik headless mimarisini anlatan lansman sunumu.",
-              "url": "https://sherlith.com"
+              "url": "/docs/sherlith-presentation.md"
             }
           ]
         }
@@ -200,7 +200,10 @@
     "pm_metrics_title": "Başarı Metrikleri & Çıktılar",
     "pm_deliverables_title": "Ürün Çıktıları",
     "pm_view_doc_btn": "Dokümanı Görüntüle",
-    "pm_no_deliverables": "Bu proje için henüz ürün çıktısı yüklenmedi."
+    "pm_no_deliverables": "Bu proje için henüz ürün çıktısı yüklenmedi.",
+    "pm_loading": "Yükleniyor...",
+    "pm_error_retry": "Lütfen daha sonra tekrar deneyin.",
+    "pm_empty_doc": "Bu doküman henüz içerik barındırmıyor."
   },
   "TechStack": {
     "section_title": "Teknoloji Stack'i"

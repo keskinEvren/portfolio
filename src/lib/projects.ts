@@ -1,3 +1,5 @@
+// NOTE: Localized deliverables (including name, description, and URLs pointing to local /docs/*.md files)
+// are defined in translation files: src/messages/tr.json and src/messages/en.json
 export interface PMDeliverable {
   name: string;
   type: "prd" | "wireframe" | "roadmap" | "flow" | "research" | "link" | "presentation";
