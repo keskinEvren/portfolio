@@ -2,9 +2,9 @@
   "Hero": {
     "greeting": "Merhaba, Ben",
     "name": "Evren Keskin",
-    "title": "Product Manager | Product Owner",
-    "subtitle": "E-ticaret ve Pazaryeri",
-    "description": "Mühendislik geçmişine sahip; e-ticaret ve pazaryeri alanlarında ürün yönetimi, product ownership ve delivery süreçlerinde deneyimli ürün profesyoneli.",
+    "title": "Full-Stack Developer | Product Professional",
+    "subtitle": "E-ticaret · Pazaryeri · SaaS",
+    "description": "E-ticaret, pazaryeri ve SaaS ortamlarında web uygulamaları geliştiren ve ürün süreçlerine katkı sağlayan full-stack geliştirici ve ürün profesyoneli.",
     "location": "Üsküdar, İstanbul",
     "cta_projects": "Projelerim",
     "cta_contact": "İletişim",
@@ -14,8 +14,8 @@
   "About": {
     "section_title": "Hakkımda",
     "greeting": "Merhaba, Ben",
-    "description_1": "Hem iç hem de dış yazılım ekipleriyle çalışarak talepleri önceliklendirme, gereksinimleri tanımlama, paydaş uyumu sağlama ve uçtan uca ürün teslimat süreçlerini (delivery) koordine etme konusunda deneyimliyim.",
-    "description_2": "Öncelik, uygulanabilirlik ve maliyet dengesini gözetirken; gereksinim netliği, sürüme hazırlık ve kesintisiz paydaş iletişimi aracılığıyla ürün süreçlerine yön veriyorum.",
+    "description_1": "React, Next.js ve .NET ile full-stack web uygulamaları geliştirirken; ürün yönetimi, backlog önceliklendirme ve teslimat koordinasyonu süreçlerine iç ve dış ekiplerle birlikte katkı sağlıyorum.",
+    "description_2": "Mühendislik pratiğini ürün düşüncesiyle birleştirerek; iş değeri, teknik uygulanabilirlik ve teslimat kapasitesi dengesini e-ticaret, pazaryeri ve SaaS ürünlerinde kuruyorum.",
     "interests_title": "Temel Yetenekler & Odak Alanları",
     "interest_1": "Ürün gereksinimleri & Backlog önceliklendirme",
     "interest_2": "Kullanıcı geri bildirim analizi & İş akışı iyileştirme",
@@ -26,8 +26,8 @@
     "education_school": "Fatih Sultan Mehmet Vakıf Üniversitesi",
     "location_title": "Lokasyon",
     "location": "Üsküdar, İstanbul, Türkiye",
-    "metric_1": "Önceliklendirme",
-    "metric_2": "Teslimat",
+    "metric_1": "Full-Stack Dev",
+    "metric_2": "Ürün Teslimatı",
     "metric_3": "Kullanıcı Geri Bildirimi"
   },
   "Experience": {
@@ -216,7 +216,7 @@
     "contact": "İletişim"
   },
   "Footer": {
-    "title": "Product Manager | Product Owner"
+    "title": "Full-Stack Developer | Product Professional"
   },
   "Features": {
     "section_title": "Yetenekler",

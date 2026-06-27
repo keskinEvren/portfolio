@@ -27,8 +27,8 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/evren-keskin-099065127",
-    text: "linkedin.com/in/evren-keskin-099065127",
+    href: "https://linkedin.com/in/evrenkeskin0998",
+    text: "linkedin.com/in/evrenkeskin0998",
   },
   {
     icon: Github,

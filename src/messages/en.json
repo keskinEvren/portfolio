@@ -2,9 +2,9 @@
   "Hero": {
     "greeting": "Hello, I'm",
     "name": "Evren Keskin",
-    "title": "Product Manager | Product Owner",
-    "subtitle": "E-commerce & Marketplace",
-    "description": "Product professional with an engineering background, working across product management, product ownership, and delivery in e-commerce and marketplace environments.",
+    "title": "Full-Stack Developer | Product Professional",
+    "subtitle": "E-commerce · Marketplace · SaaS",
+    "description": "Full-stack developer and product professional with hands-on experience building and shipping web applications in e-commerce, marketplace, and SaaS environments.",
     "location": "Üsküdar, Istanbul",
     "cta_projects": "My Projects",
     "cta_contact": "Contact",
@@ -14,8 +14,8 @@
   "About": {
     "section_title": "About",
     "greeting": "Hello, I'm",
-    "description_1": "Experienced in prioritizing requests, defining requirements, aligning stakeholders, and coordinating execution across both internal and external software teams.",
-    "description_2": "Strong in balancing urgency, feasibility, and cost while guiding delivery through requirement clarity, rollout readiness, and continuous stakeholder communication.",
+    "description_1": "Building full-stack web applications with React, Next.js, and .NET while contributing to product management, backlog prioritization, and delivery coordination across internal and external teams.",
+    "description_2": "Combining engineering execution with product thinking to balance business value, technical feasibility, and delivery capacity across e-commerce, marketplace, and SaaS products.",
     "interests_title": "Core Skills & Focus Areas",
     "interest_1": "Product requirements & backlog prioritization",
     "interest_2": "User feedback translation & workflow improvement",
@@ -26,8 +26,8 @@
     "education_school": "Fatih Sultan Mehmet Vakıf University",
     "location_title": "Location",
     "location": "Üsküdar, Istanbul, Türkiye",
-    "metric_1": "Prioritization",
-    "metric_2": "Delivery",
+    "metric_1": "Full-Stack Dev",
+    "metric_2": "Product Delivery",
     "metric_3": "User Feedback"
   },
   "Experience": {
@@ -216,7 +216,7 @@
     "contact": "Contact"
   },
   "Footer": {
-    "title": "Product Manager | Product Owner"
+    "title": "Full-Stack Developer | Product Professional"
   },
   "Features": {
     "section_title": "Skills",
