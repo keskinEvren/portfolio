@@ -3,8 +3,8 @@
     "greeting": "Merhaba, Ben",
     "name": "Evren Keskin",
     "title": "Full-Stack Developer | Product Professional",
-    "subtitle": "E-ticaret · Pazaryeri · SaaS",
-    "description": "E-ticaret, pazaryeri ve SaaS ortamlarında web uygulamaları geliştiren ve ürün süreçlerine katkı sağlayan full-stack geliştirici ve ürün profesyoneli.",
+    "subtitle": "Web Uygulamaları · Ürün Geliştirme · SaaS",
+    "description": "Mimariden deploy'a kadar uçtan uca full-stack web uygulamaları geliştiriyor, mühendislik becerilerini ürün düşüncesiyle birleştirerek gerçek kullanıcı değeri üretiyorum.",
     "location": "Üsküdar, İstanbul",
     "cta_projects": "Projelerim",
     "cta_contact": "İletişim",
@@ -14,13 +14,13 @@
   "About": {
     "section_title": "Hakkımda",
     "greeting": "Merhaba, Ben",
-    "description_1": "React, Next.js ve .NET ile full-stack web uygulamaları geliştirirken; ürün yönetimi, backlog önceliklendirme ve teslimat koordinasyonu süreçlerine iç ve dış ekiplerle birlikte katkı sağlıyorum.",
-    "description_2": "Mühendislik pratiğini ürün düşüncesiyle birleştirerek; iş değeri, teknik uygulanabilirlik ve teslimat kapasitesi dengesini e-ticaret, pazaryeri ve SaaS ürünlerinde kuruyorum.",
+    "description_1": "Bilgisayar mühendisliği mezunu olarak React, Next.js ve .NET ile full-stack web uygulamaları geliştiriyorum. Sistem mimarisinden production'a kadar tüm geliştirme sürecini sahipleniyorum.",
+    "description_2": "İş ihtiyaçlarını teknik çözümlere dönüştürerek, backlog yönetimi ve teslimat koordinasyonuyla mühendislik ile ürün arasındaki köprüyü kuruyorum.",
     "interests_title": "Temel Yetenekler & Odak Alanları",
-    "interest_1": "Ürün gereksinimleri & Backlog önceliklendirme",
-    "interest_2": "Kullanıcı geri bildirim analizi & İş akışı iyileştirme",
-    "interest_3": "Çapraz fonksiyonel (Cross-functional) iş birliği & Teslimat koordinasyonu",
-    "interest_4": "E-ticaret ve pazaryeri operasyonları",
+    "interest_1": "Full-stack mimari & sistem tasarımı",
+    "interest_2": "Ürün gereksinimleri & Backlog sahipliği",
+    "interest_3": "CI/CD, test & teslimat koordinasyonu",
+    "interest_4": "Çapraz fonksiyonel ekip iş birliği",
     "education_title": "Eğitim",
     "education_degree": "Bilgisayar Mühendisliği Lisans, 2025",
     "education_school": "Fatih Sultan Mehmet Vakıf Üniversitesi",
@@ -28,7 +28,7 @@
     "location": "Üsküdar, İstanbul, Türkiye",
     "metric_1": "Full-Stack Dev",
     "metric_2": "Ürün Teslimatı",
-    "metric_3": "Kullanıcı Geri Bildirimi"
+    "metric_3": "Mühendislik"
   },
   "Experience": {
     "section_title": "Deneyim",
@@ -220,8 +220,8 @@
   },
   "Features": {
     "section_title": "Yetenekler",
-    "heading": "Teknoloji Stack'im",
-    "subheading": "Modern teknolojilerle güçlü ve ölçeklenebilir çözümler üretiyorum",
+    "heading": "Mühendislik Araç Setim",
+    "subheading": "Production uygulamaları geliştirmek, deploy etmek ve sürdürmek için kullandığım teknolojiler",
     "skills": [
       {
         "title": "Programming Languages",

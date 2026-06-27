@@ -49,7 +49,9 @@ export function Navbar() {
       )}
     >
       <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-        <Link href="#home" className="w-0 md:w-auto" aria-label="Home" />
+        <Link href="#home" className="flex items-center">
+          <span className="text-lg font-semibold text-white">Evren Keskin</span>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (

@@ -4,7 +4,7 @@ export const personalData = {
   email: "evrenkeskin0998@gmail.com",
   location: "Üsküdar, İstanbul, Türkiye",
   description:
-    "Full-stack geliştirici ve ürün profesyoneli. React, Next.js ve .NET ile modern web uygulamaları geliştiriyor, ürün süreçlerini yönetiyorum.",
+    "Bilgisayar mühendisliği temelli full-stack developer. React, Next.js ve .NET ile uçtan uca web uygulamaları geliştiriyorum.",
   cvLink:
     "https://drive.google.com/uc?export=download&id=1NEVDz7Cp0n8fn07buruJ2ZAn6UVjvTh0",
   social: {
@@ -17,7 +17,7 @@ export const personalData = {
 export const seoData = {
   title: "Evren Keskin - Full-Stack Developer & Product Professional",
   description:
-    "Full-Stack Developer & Product Professional. React, Next.js ve .NET ile modern web uygulamaları geliştiriyorum.",
+    "Full-Stack Developer & Product Professional. Mimariden production'a uçtan uca web uygulamaları geliştiriyorum.",
   url: "https://evrenkeskin.com", // Placeholder
   ogImage: "/og-image.jpg", // Placeholder
   keywords: [

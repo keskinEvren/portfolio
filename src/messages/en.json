@@ -3,8 +3,8 @@
     "greeting": "Hello, I'm",
     "name": "Evren Keskin",
     "title": "Full-Stack Developer | Product Professional",
-    "subtitle": "E-commerce · Marketplace · SaaS",
-    "description": "Full-stack developer and product professional with hands-on experience building and shipping web applications in e-commerce, marketplace, and SaaS environments.",
+    "subtitle": "Web Apps · Product Development · SaaS",
+    "description": "Building and shipping full-stack web applications end-to-end, from architecture to deployment. Combining engineering skills with product thinking to deliver real user value.",
     "location": "Üsküdar, Istanbul",
     "cta_projects": "My Projects",
     "cta_contact": "Contact",
@@ -14,13 +14,13 @@
   "About": {
     "section_title": "About",
     "greeting": "Hello, I'm",
-    "description_1": "Building full-stack web applications with React, Next.js, and .NET while contributing to product management, backlog prioritization, and delivery coordination across internal and external teams.",
-    "description_2": "Combining engineering execution with product thinking to balance business value, technical feasibility, and delivery capacity across e-commerce, marketplace, and SaaS products.",
+    "description_1": "Computer Engineering graduate who builds full-stack web applications with React, Next.js, and .NET. I architect systems, write code, and own the delivery pipeline from requirements to production.",
+    "description_2": "I bridge the gap between engineering and product by translating business needs into technical solutions, managing backlogs, and coordinating delivery across cross-functional teams.",
     "interests_title": "Core Skills & Focus Areas",
-    "interest_1": "Product requirements & backlog prioritization",
-    "interest_2": "User feedback translation & workflow improvement",
-    "interest_3": "Cross-functional collaboration & delivery coordination",
-    "interest_4": "E-commerce and marketplace operations",
+    "interest_1": "Full-stack architecture & system design",
+    "interest_2": "Product requirements & backlog ownership",
+    "interest_3": "CI/CD, testing & delivery coordination",
+    "interest_4": "Cross-functional team collaboration",
     "education_title": "Education",
     "education_degree": "B.S. in Computer Engineering, 2025",
     "education_school": "Fatih Sultan Mehmet Vakıf University",
@@ -28,7 +28,7 @@
     "location": "Üsküdar, Istanbul, Türkiye",
     "metric_1": "Full-Stack Dev",
     "metric_2": "Product Delivery",
-    "metric_3": "User Feedback"
+    "metric_3": "Engineering"
   },
   "Experience": {
     "section_title": "Experience",
@@ -220,8 +220,8 @@
   },
   "Features": {
     "section_title": "Skills",
-    "heading": "My Tech Stack",
-    "subheading": "Building powerful and scalable solutions with modern technologies",
+    "heading": "Engineering Toolkit",
+    "subheading": "The technologies and tools I use to build, ship, and maintain production applications",
     "skills": [
       {
         "title": "Programming Languages",
