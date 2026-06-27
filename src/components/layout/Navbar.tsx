@@ -9,7 +9,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, Code } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
@@ -50,8 +50,7 @@ export function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
         <Link href="#home" className="flex items-center gap-2">
-          <Code className="w-6 h-6 text-white" />
-          <span className="text-xl font-semibold text-white">Keen</span>
+          <span className="text-xl font-bold text-white tracking-tight">EK</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
