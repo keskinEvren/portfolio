@@ -49,9 +49,7 @@ export function Navbar() {
       )}
     >
       <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-        <Link href="#home" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-white tracking-tight">EK</span>
-        </Link>
+        <Link href="#home" className="w-0 md:w-auto" aria-label="Home" />
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
