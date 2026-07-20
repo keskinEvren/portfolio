@@ -26,6 +26,13 @@ export interface ProjectStaticConfig {
 
 export const projectsConfig: ProjectStaticConfig[] = [
   {
+    id: "watchpath",
+    technologies: ["Next.js 16 (App Router)", "React 19", "AI (Gemini)", "Supabase", "React Flow"],
+    github: "https://github.com/keskinEvren/watchpath",
+    live: "https://watchpath-two.vercel.app",
+    hasPmDetails: true,
+  },
+  {
     id: "kariyer-takip",
     technologies: [".NET", "Razor Pages", "PostgreSQL", "RBAC"],
     github: "https://github.com/keskinEvren/kariyer-takip-portali",
@@ -49,12 +56,5 @@ export const projectsConfig: ProjectStaticConfig[] = [
     technologies: ["Next.js", "React", "Three.js", "Tailwind CSS", "WPGraphQL", "Zustand"],
     live: "https://sherlith.com",
     hasPmDetails: true,
-  },
-  {
-    id: "watchpath",
-    technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
-    github: "https://github.com/keskinEvren/watchpath",
-    live: "https://watchpath-two.vercel.app",
-    hasPmDetails: false,
   },
 ];

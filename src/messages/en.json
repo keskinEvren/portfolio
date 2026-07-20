@@ -71,6 +71,35 @@
     "subheading": "Featured projects focusing on delivery and architecture",
     "items": [
       {
+        "title": "Watchpath",
+        "description": "An AI-powered dynamic learning roadmap generator built with Google Gemini and YouTube Data API. It generates interactive, React Flow-based mind maps and multi-video discovery paths for any topic users want to learn.",
+        "pmDetails": {
+          "role": "Product Owner & Lead Developer",
+          "timeline": "Jun 2026 - Present",
+          "problem": "Users trying to learn a new topic on YouTube often fall into 'tutorial hell'—an endless loop of videos where it's unclear which video to watch first, which sources are reliable, and what the hierarchical relationship is between concepts.",
+          "solution": "Designed a platform that analyzes a user's topic or link, places videos in a pedagogical sequence, and visualizes them as an interactive 'learning map' using Next.js App Router and React Flow.",
+          "metrics": [
+            "Optimized YouTube API daily quota usage by 80% through a 7-day TTL Supabase search cache mechanism.",
+            "Eliminated AI analysis costs by integrating a zero-cost transcript library for video content evaluation.",
+            "Achieved sub-16ms render performance on complex state structures containing 50+ nodes with React Flow."
+          ],
+          "deliverables": [
+            {
+              "name": "Product Requirements Document (PRD)",
+              "type": "prd",
+              "description": "Detailed PRD outlining the Tutorial Hell problem, target audience, and MVP success metrics.",
+              "url": "/docs/watchpath-prd.md"
+            },
+            {
+              "name": "System Architecture & AI Pipeline",
+              "type": "flow",
+              "description": "Architectural document explaining the Next.js architecture, database ERD, and AI/YouTube pipeline.",
+              "url": "/docs/watchpath-architecture.md"
+            }
+          ]
+        }
+      },
+      {
         "title": "Career Tracking Portal",
         "description": "Designed and developed a role-based platform with Admin, Teacher, and Student workflows to manage internship processes end to end. Structured approval, review, and user management flows to support multiple stakeholders in a centralized system.",
         "pmDetails": {
@@ -185,10 +214,6 @@
             }
           ]
         }
-      },
-      {
-        "title": "Watchpath",
-        "description": "A private web application built using modern web technologies and best practices. Features a customizable interface and performance-oriented architecture."
       }
     ],
     "github_btn": "GitHub",

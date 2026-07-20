@@ -71,6 +71,35 @@
     "subheading": "Son dönemdeki öne çıkan projelerim",
     "items": [
       {
+        "title": "Watchpath",
+        "description": "Yapay zeka (Google Gemini) ve YouTube Data API kullanılarak geliştirilmiş dinamik bir öğrenme rotası (roadmap) oluşturucu. Kullanıcıların girdiği herhangi bir konu hakkında, React Flow tabanlı interaktif zihin haritaları ve hiyerarşik çoklu-video keşif rotaları üretir.",
+        "pmDetails": {
+          "role": "Product Owner & Lead Developer",
+          "timeline": "Haz 2026 - Günümüz",
+          "problem": "YouTube'da yeni bir konu öğrenmek isteyen kullanıcılar 'tutorial hell' olarak bilinen sonsuz video döngüsüne düşmektedir. Hangi videonun önce izlenmesi gerektiği ve konular arası bağların ne olduğu belirsizdir.",
+          "solution": "Kullanıcının girdiği konu veya linki analiz eden, videoları pedagojik bir sıraya koyan ve Next.js App Router + React Flow ile görselleştirilmiş interaktif bir 'öğrenme haritası' oluşturan bir platform tasarlandı.",
+          "metrics": [
+            "YouTube API kota kullanımını %80 oranında düşüren 7-günlük Supabase arama cache (TTL) mekanizması kuruldu.",
+            "Sıfır maliyetli transcript kütüphanesi entegrasyonu ile videoların AI analizi optimize edildi.",
+            "React Flow ile 50+ node içeren karmaşık state yapılarında 16ms altı render performansı elde edildi."
+          ],
+          "deliverables": [
+            {
+              "name": "Ürün Gereksinim Dokümanı (PRD)",
+              "type": "prd",
+              "description": "Tutorial Hell problemini, hedef kitleyi ve MVP başarı metriklerini detaylandıran PRD dokümanı.",
+              "url": "/docs/watchpath-prd.md"
+            },
+            {
+              "name": "Sistem Mimarisi ve AI Pipeline",
+              "type": "flow",
+              "description": "Next.js mimarisi, veritabanı ER diyagramı ve AI/YouTube pipeline'ını anlatan mimari belge.",
+              "url": "/docs/watchpath-architecture.md"
+            }
+          ]
+        }
+      },
+      {
         "title": "Kariyer Takip Portalı",
         "description": "Staj süreçlerini uçtan uca yönetmek için Admin, Öğretmen ve Öğrenci akışlarına sahip rol tabanlı (RBAC) bir platform tasarlayıp geliştirdim. Merkezileştirilmiş sistem üzerinden birden fazla paydaş için onay, inceleme ve kullanıcı yönetimi süreçlerini yapılandırdım.",
         "pmDetails": {
@@ -185,10 +214,6 @@
             }
           ]
         }
-      },
-      {
-        "title": "Watchpath",
-        "description": "Modern web teknolojileri ve best practice'ler kullanılarak geliştirilmiş kapalı kaynaklı (private) web projesi. Özelleştirilebilir arayüz ve performans odaklı mimariye sahiptir."
       }
     ],
     "github_btn": "GitHub",
