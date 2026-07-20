@@ -73,7 +73,7 @@ export function Hero() {
             </Button>
           </Link>
           <a
-            href="https://drive.google.com/uc?export=download&id=1NEVDz7Cp0n8fn07buruJ2ZAn6UVjvTh0"
+            href="https://drive.google.com/uc?export=download&id=13L9sCIq0CfREZ9nhv0aMXk90w3KORt5Z"
             download
           >
             <Button
