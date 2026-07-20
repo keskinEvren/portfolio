@@ -185,6 +185,10 @@
             }
           ]
         }
+      },
+      {
+        "title": "Watchpath",
+        "description": "A private web application built using modern web technologies and best practices. Features a customizable interface and performance-oriented architecture."
       }
     ],
     "github_btn": "GitHub",

@@ -50,4 +50,11 @@ export const projectsConfig: ProjectStaticConfig[] = [
     live: "https://sherlith.com",
     hasPmDetails: true,
   },
+  {
+    id: "watchpath",
+    technologies: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+    github: "https://github.com/keskinEvren/watchpath",
+    live: "https://watchpath-two.vercel.app",
+    hasPmDetails: false,
+  },
 ];

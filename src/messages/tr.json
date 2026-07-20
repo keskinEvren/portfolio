@@ -185,6 +185,10 @@
             }
           ]
         }
+      },
+      {
+        "title": "Watchpath",
+        "description": "Modern web teknolojileri ve best practice'ler kullanılarak geliştirilmiş kapalı kaynaklı (private) web projesi. Özelleştirilebilir arayüz ve performans odaklı mimariye sahiptir."
       }
     ],
     "github_btn": "GitHub",
