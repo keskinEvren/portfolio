@@ -108,10 +108,12 @@ function TiltCard({
   children,
   coverImage,
   projectTitle,
+  onCoverClick,
 }: {
   children: React.ReactNode;
   coverImage?: string;
   projectTitle: string;
+  onCoverClick?: () => void;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
@@ -156,8 +158,26 @@ function TiltCard({
           "p-0 h-full flex flex-col relative group bg-white/[0.03] border-white/10 hover:border-white/20 hover:bg-white/[0.06] transition-all duration-500 overflow-hidden"
         )}
       >
-        {/* Cover Image with inner parallax */}
-        <div className="relative w-full aspect-video overflow-hidden bg-white/[0.03] border-b border-white/10">
+        {/* Cover Image with inner parallax — click opens PM case study */}
+        <div
+          role={onCoverClick ? "button" : undefined}
+          tabIndex={onCoverClick ? 0 : undefined}
+          onClick={onCoverClick}
+          onKeyDown={
+            onCoverClick
+              ? (e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onCoverClick();
+                  }
+                }
+              : undefined
+          }
+          className={cn(
+            "relative w-full aspect-video overflow-hidden bg-white/[0.03] border-b border-white/10",
+            onCoverClick && "cursor-pointer"
+          )}
+        >
           {coverImage && !imgError ? (
             <motion.div
               style={{ x: imageX, y: imageY, scale: 1.15 }}
@@ -167,7 +187,7 @@ function TiltCard({
                 src={coverImage}
                 alt={`${projectTitle} cover`}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 onError={() => setImgError(true)}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
@@ -180,6 +200,9 @@ function TiltCard({
           )}
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
+          {onCoverClick && (
+            <div className="absolute inset-0 bg-white/0 group-hover:bg-white/[0.04] transition-colors duration-300 pointer-events-none" />
+          )}
         </div>
 
         {/* Card Content */}
@@ -289,7 +312,15 @@ export function Projects() {
               const config = projectsConfig.find((c) => c.id === project.id);
               return (
                 <motion.div key={idx} variants={itemVariants} className="h-full">
-                  <TiltCard coverImage={config?.coverImage} projectTitle={project.title}>
+                  <TiltCard
+                    coverImage={config?.coverImage}
+                    projectTitle={project.title}
+                    onCoverClick={
+                      project.hasPmDetails
+                        ? () => handleOpenSheet(project)
+                        : undefined
+                    }
+                  >
                     <ProjectCardContent
                       project={project}
                       t={t}
@@ -309,7 +340,15 @@ export function Projects() {
               const config = projectsConfig.find((c) => c.id === project.id);
               return (
                 <motion.div key={idx} variants={itemVariants} className="h-full">
-                  <TiltCard coverImage={config?.coverImage} projectTitle={project.title}>
+                  <TiltCard
+                    coverImage={config?.coverImage}
+                    projectTitle={project.title}
+                    onCoverClick={
+                      project.hasPmDetails
+                        ? () => handleOpenSheet(project)
+                        : undefined
+                    }
+                  >
                     <ProjectCardContent
                       project={project}
                       t={t}
