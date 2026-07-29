@@ -22,6 +22,8 @@ export interface ProjectStaticConfig {
   github?: string;
   live?: string;
   hasPmDetails: boolean;
+  coverImage?: string;
+  screenshots?: string[];
 }
 
 export const projectsConfig: ProjectStaticConfig[] = [
@@ -31,12 +33,23 @@ export const projectsConfig: ProjectStaticConfig[] = [
     github: "https://github.com/keskinEvren/watchpath",
     live: "https://watchpath-two.vercel.app",
     hasPmDetails: true,
+    coverImage: "/screenshots/watchpath/cover.png",
+    screenshots: [
+      "/screenshots/watchpath/screen-1.png",
+      "/screenshots/watchpath/screen-2.png",
+      "/screenshots/watchpath/screen-3.png",
+    ],
   },
   {
     id: "kariyer-takip",
     technologies: [".NET", "Razor Pages", "PostgreSQL", "RBAC"],
     github: "https://github.com/keskinEvren/kariyer-takip-portali",
     hasPmDetails: true,
+    coverImage: "/screenshots/kariyer-takip/cover.png",
+    screenshots: [
+      "/screenshots/kariyer-takip/screen-1.png",
+      "/screenshots/kariyer-takip/screen-2.png",
+    ],
   },
   {
     id: "apartman-plus",
@@ -44,17 +57,34 @@ export const projectsConfig: ProjectStaticConfig[] = [
     github: "https://github.com/keskinEvren/apartman-plus-resident-ops",
     live: "https://www.komsu.site/",
     hasPmDetails: true,
+    coverImage: "/screenshots/apartman-plus/cover.png",
+    screenshots: [
+      "/screenshots/apartman-plus/screen-1.png",
+      "/screenshots/apartman-plus/screen-2.png",
+      "/screenshots/apartman-plus/screen-3.png",
+    ],
   },
   {
     id: "hizir-global",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "next-intl", "Node.js"],
     live: "https://hizirglobal.com.tr/tr",
     hasPmDetails: true,
+    coverImage: "/screenshots/hizir-global/cover.png",
+    screenshots: [
+      "/screenshots/hizir-global/screen-1.png",
+      "/screenshots/hizir-global/screen-2.png",
+    ],
   },
   {
     id: "sherlith",
     technologies: ["Next.js", "React", "Three.js", "Tailwind CSS", "WPGraphQL", "Zustand"],
     live: "https://sherlith.com",
     hasPmDetails: true,
+    coverImage: "/screenshots/sherlith/cover.png",
+    screenshots: [
+      "/screenshots/sherlith/screen-1.png",
+      "/screenshots/sherlith/screen-2.png",
+      "/screenshots/sherlith/screen-3.png",
+    ],
   },
 ];

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   Sheet,
   SheetContent,
@@ -27,6 +28,8 @@ import {
   TrendingUp,
   FileDown,
   X,
+  ChevronLeft,
+  ImageOff,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
@@ -69,7 +72,93 @@ interface ProjectDetailSheetProps {
     description: string;
     technologies: string[];
     pmDetails?: PMDetails;
+    screenshots?: string[];
   } | null;
+}
+
+function ScreenshotGallery({ screenshots }: { screenshots: string[] }) {
+  const [current, setCurrent] = useState(0);
+  const [imgErrors, setImgErrors] = useState<Record<number, boolean>>({});
+
+  const prev = () => setCurrent((c) => (c - 1 + screenshots.length) % screenshots.length);
+  const next = () => setCurrent((c) => (c + 1) % screenshots.length);
+
+  if (screenshots.length === 0) return null;
+
+  return (
+    <div className="mb-8 relative z-10">
+      <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 group">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.25 }}
+            className="absolute inset-0"
+          >
+            {!imgErrors[current] ? (
+              <Image
+                src={screenshots[current]}
+                alt={`Screenshot ${current + 1}`}
+                fill
+                className="object-cover"
+                onError={() => setImgErrors((prev) => ({ ...prev, [current]: true }))}
+                sizes="(max-width: 768px) 100vw, 672px"
+              />
+            ) : (
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-white/20">
+                <ImageOff className="w-10 h-10" />
+                <span className="text-xs font-mono">screen-{current + 1}.png</span>
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+
+        {/* Prev / Next arrows */}
+        {screenshots.length > 1 && (
+          <>
+            <button
+              onClick={prev}
+              className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 border border-white/10 text-white/70 hover:text-white hover:bg-black/60 transition-all opacity-0 group-hover:opacity-100 focus:outline-none"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 border border-white/10 text-white/70 hover:text-white hover:bg-black/60 transition-all opacity-0 group-hover:opacity-100 focus:outline-none"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </>
+        )}
+
+        {/* Counter badge */}
+        <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-black/50 border border-white/10 text-white/60 text-3xs font-mono">
+          {current + 1} / {screenshots.length}
+        </div>
+      </div>
+
+      {/* Dot navigation */}
+      {screenshots.length > 1 && (
+        <div className="flex justify-center gap-2 mt-3">
+          {screenshots.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={cn(
+                "w-1.5 h-1.5 rounded-full transition-all duration-300 focus:outline-none",
+                i === current ? "bg-white scale-125" : "bg-white/30 hover:bg-white/60"
+              )}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 const getDeliverableIcon = (type: string) => {
@@ -259,6 +348,11 @@ export function ProjectDetailSheet({
                 transition={{ duration: 0.2 }}
                 className="space-y-8 relative z-10"
               >
+                {/* Screenshot Gallery */}
+                {project.screenshots && project.screenshots.length > 0 && (
+                  <ScreenshotGallery screenshots={project.screenshots} />
+                )}
+
                 {/* Problem Statement */}
                 <div className="space-y-3">
                   <h4 className="text-xs uppercase tracking-widest text-white/45 mb-3 block font-mono">
